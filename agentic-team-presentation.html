@@ -179,6 +179,7 @@
   .slide-hero {
     justify-content: flex-end;
     padding-bottom: 96px;
+    overflow: hidden;
   }
   .hero-layout {
     display: grid;
@@ -188,7 +189,7 @@
     position: relative;
     width: 100%;
   }
-  .hero-left { position: relative; }
+  .hero-left { position: relative; z-index: 1; }
   .hero-right {
     position: relative;
     height: 100vh;
@@ -196,6 +197,14 @@
     align-items: center;
     justify-content: center;
     margin: -80px -72px -96px 0;
+    overflow: visible;
+  }
+  .hero-right canvas {
+    width: 160%;
+    height: 160%;
+    min-width: 800px;
+    min-height: 800px;
+    margin: -30% -30%;
   }
   .hero-grid {
     position: absolute;
@@ -515,7 +524,7 @@
     .cta-grid { grid-template-columns: 1fr; }
     .hero-title { font-size: 44px; }
     .hero-layout { grid-template-columns: 1fr; }
-    .hero-right { display: none; }
+    .hero-right { opacity: 0.3; }
     .nav-dots { display: none; }
   }
 
@@ -953,7 +962,7 @@
           <div style="display:flex;flex-wrap:wrap;gap:3px;margin-bottom:4px;">
             <span style="font-size:11px;background:#faece7;color:#993c1d;padding:2px 5px;border-radius:3px;">QA Engineer</span>
             <span style="font-size:11px;background:#eeedfe;color:#534ab7;padding:2px 5px;border-radius:3px;">Perf Tester</span>
-            <span style="font-size:11px;background:#e1f5ee;color:#0f6e56;padding:2px 5px;border-radius:3px;">A11y Specialist</span>
+            <span style="font-size:11px;background:#e1f5ee;color:#0f6e56;padding:2px 5px;border-radius:3px;">CI/CD</span>
           </div>
           <div style="font-size:12px;color:var(--ink-muted);line-height:1.3;">Test execution, Visual regression, Accessibility, Performance</div>
         </div>
@@ -1361,9 +1370,9 @@
 
   // 3 human "planets" — white monochrome version
   const humans = [
-    { x: 480, y: 350, ox: 480, oy: 350, phase: 0.0, speed: 0.30, drift: 35 },
-    { x: 820, y: 450, ox: 820, oy: 450, phase: 2.1, speed: 0.25, drift: 40 },
-    { x: 620, y: 650, ox: 620, oy: 650, phase: 4.3, speed: 0.35, drift: 32 },
+    { x: 900, y: 300, ox: 900, oy: 300, phase: 0.0, speed: 0.30, drift: 35 },
+    { x: 1250, y: 420, ox: 1250, oy: 420, phase: 2.1, speed: 0.25, drift: 40 },
+    { x: 1050, y: 620, ox: 1050, oy: 620, phase: 4.3, speed: 0.35, drift: 32 },
   ];
 
   let seed = 77;
