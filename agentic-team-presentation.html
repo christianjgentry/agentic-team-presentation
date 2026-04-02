@@ -1685,10 +1685,14 @@ if (btn) {
       slide.scrollIntoView({ behavior: 'instant' });
       await new Promise(r => setTimeout(r, 500));
 
+      // Use the slide's computed background, falling back to the page paper color
+      const slideBg = getComputedStyle(slide).backgroundColor;
+      const bgColor = (slideBg && slideBg !== 'rgba(0, 0, 0, 0)') ? slideBg : '#f5f3ee';
+
       const canvas = await html2canvas(slide, {
         scale: 2,
         useCORS: true,
-        backgroundColor: null,
+        backgroundColor: bgColor,
         width: slide.offsetWidth,
         height: slide.offsetHeight,
         scrollX: 0,
