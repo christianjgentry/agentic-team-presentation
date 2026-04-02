@@ -514,6 +514,32 @@
     align-items: center;
   }
 
+  /* ── PDF EXPORT BUTTON ── */
+  .pdf-export-btn {
+    position: fixed;
+    bottom: 24px;
+    left: 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: var(--ink-muted);
+    background: var(--paper-warm);
+    border: 0.5px solid var(--line-strong);
+    border-radius: 6px;
+    padding: 8px 14px;
+    cursor: pointer;
+    z-index: 200;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .pdf-export-btn:hover {
+    color: var(--ink);
+    border-color: var(--ink-muted);
+  }
+  .pdf-export-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
     .slide { padding: 60px 28px; }
@@ -539,6 +565,9 @@
 </style>
 </head>
 <body>
+
+<!-- PDF EXPORT BUTTON -->
+<button class="pdf-export-btn" id="pdfExportBtn" title="Export presentation as PDF">Export PDF</button>
 
 <!-- PROGRESS BAR -->
 <div class="progress-bar" id="progressBar"></div>
@@ -1614,6 +1643,84 @@
   updateUI(0);
   // Trigger reveal for hero slide immediately
   slides[0].querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+})();
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js"></script>
+<script>
+(function() {
+  const btn = document.getElementById('pdfExportBtn');
+  if (!btn) return;
+
+  btn.addEventListener('click', async function() {
+    btn.disabled = true;
+    btn.textContent = 'Capturing…';
+
+    const slides = document.querySelectorAll('.slide');
+    const { jsPDF } = window.jspdf;
+
+    // Ensure all reveals are visible for capture
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+
+    // Hide UI controls during capture
+    const uiEls = [btn, document.getElementById('progressBar'), document.getElementById('slideCounter'), document.getElementById('navDots')];
+    uiEls.forEach(el => { if (el) el.style.display = 'none'; });
+
+    let pdf = null;
+
+    for (let i = 0; i < slides.length; i++) {
+      btn.style.display = 'block';
+      btn.textContent = 'Slide ' + (i + 1) + ' / ' + slides.length + '…';
+      btn.style.display = 'none';
+
+      const slide = slides[i];
+
+      // Scroll slide into view and wait for render
+      slide.scrollIntoView({ behavior: 'instant' });
+      await new Promise(r => setTimeout(r, 500));
+
+      const canvas = await html2canvas(slide, {
+        scale: 2,
+        useCORS: true,
+        backgroundColor: null,
+        width: slide.offsetWidth,
+        height: slide.offsetHeight,
+        scrollX: 0,
+        scrollY: 0,
+        windowWidth: slide.offsetWidth,
+        windowHeight: slide.offsetHeight,
+      });
+
+      const imgData = canvas.toDataURL('image/jpeg', 0.92);
+      const slideW = slide.offsetWidth;
+      const slideH = slide.offsetHeight;
+
+      // PDF page matches slide aspect ratio
+      const pdfW = 297; // A4 landscape-ish width in mm
+      const pdfH = (slideH / slideW) * pdfW;
+
+      if (i === 0) {
+        pdf = new jsPDF({ orientation: pdfW > pdfH ? 'landscape' : 'portrait', unit: 'mm', format: [pdfW, pdfH] });
+      } else {
+        pdf.addPage([pdfW, pdfH], pdfW > pdfH ? 'landscape' : 'portrait');
+      }
+
+      pdf.addImage(imgData, 'JPEG', 0, 0, pdfW, pdfH);
+    }
+
+    // Restore UI
+    uiEls.forEach(el => { if (el) el.style.display = ''; });
+
+    // Save
+    pdf.save('agentic-team-presentation.pdf');
+
+    btn.disabled = false;
+    btn.textContent = 'Export PDF';
+
+    // Scroll back to first slide
+    slides[0].scrollIntoView({ behavior: 'smooth' });
+  });
 })();
 </script>
 
