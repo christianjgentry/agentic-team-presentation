@@ -100,6 +100,27 @@
     line-height: 1.7;
   }
 
+  /* ── DENSITY VARIANTS ── */
+  .slide--compact { padding: 48px 48px; }
+  .slide--semi-compact { padding: 60px 48px; }
+
+  /* ── TITLE SIZE VARIANTS ── */
+  .slide-title--md { font-size: clamp(32px, 3.5vw, 50px); }
+  .slide-title--sm { font-size: clamp(28px, 3vw, 40px); }
+
+  /* ── BODY TEXT VARIANT ── */
+  .slide-body--sm { font-size: 14px; }
+
+  /* ── CARD ELEMENTS ── */
+  .card-role-title { font-family: 'DM Serif Display', serif; font-size: 15px; color: var(--ink); line-height: 1.2; }
+  .card-section-label { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 4px; }
+  .card-badge { font-size: 11px; padding: 2px 7px; border-radius: 3px; }
+  .card-desc { font-size: 12px; color: var(--ink-muted); line-height: 1.4; }
+
+  /* ── CALLOUT VARIANTS ── */
+  .callout--compact { padding: 20px 24px; }
+  .callout-text--sm { font-size: 14px; }
+
   /* ── ANIMATIONS ── */
   .reveal {
     opacity: 0;
@@ -544,7 +565,7 @@
 <div class="progress-bar" id="progressBar"></div>
 
 <!-- SLIDE COUNTER -->
-<div class="slide-counter" id="slideCounter">1 / 7</div>
+<div class="slide-counter" id="slideCounter">1 / 9</div>
 
 <!-- NAV DOTS -->
 <div class="nav-dots" id="navDots"></div>
@@ -572,8 +593,8 @@
           <div class="hero-stat-label">People per team</div>
         </div>
         <div class="hero-stat">
-          <div class="hero-stat-num">10x</div>
-          <div class="hero-stat-label">Output trajectory</div>
+          <div class="hero-stat-num">Impact</div>
+          <div class="hero-stat-label">Over activity</div>
         </div>
         <div class="hero-stat">
           <div class="hero-stat-num">&#x221E;</div>
@@ -769,7 +790,7 @@
 <!-- ═══════════════════════════════════════════════════════
      SLIDE 2 — THE OLD MODEL
      ═══════════════════════════════════════════════════════ -->
-<section class="slide" data-slide="2" style="padding:80px 72px;">
+<section class="slide" data-slide="2">
   <div class="slide-split">
     <div class="slide-split-left">
       <div class="slide-eyebrow reveal" style="color:var(--ember)">
@@ -814,7 +835,7 @@
 <!-- ═══════════════════════════════════════════════════════
      SLIDE 3 — THE AI-ENABLED ENGINEER
      ═══════════════════════════════════════════════════════ -->
-<section class="slide" data-slide="3" style="padding:60px 48px;">
+<section class="slide slide--semi-compact" data-slide="3">
   <div class="slide-split" style="grid-template-columns:1fr 1.4fr;gap:40px;">
     <div class="slide-split-left">
       <div class="slide-eyebrow reveal" style="color:var(--sage)">
@@ -889,16 +910,6 @@
         <rect x="74" y="72" width="136" height="48" rx="24" fill="#fdf3e3" stroke="#854f0b" stroke-width="0.75"/>
         <text font-family="DM Mono,monospace" font-size="11" fill="#5a3706" x="142" y="100" text-anchor="middle" dominant-baseline="central">Planning Agents</text>
 
-        <!-- Return flow lines (results/feedback back to engineer) -->
-        <line x1="300" y1="104" x2="300" y2="178" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="3 4" opacity="0.35"/>
-        <line x1="424" y1="124" x2="338" y2="192" stroke="#0f6e56" stroke-width="0.6" stroke-dasharray="3 4" opacity="0.35"/>
-        <line x1="436" y1="234" x2="352" y2="232" stroke="#993c1d" stroke-width="0.6" stroke-dasharray="3 4" opacity="0.35"/>
-        <line x1="424" y1="348" x2="338" y2="268" stroke="#854f0b" stroke-width="0.6" stroke-dasharray="3 4" opacity="0.35"/>
-        <line x1="300" y1="366" x2="300" y2="282" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="3 4" opacity="0.35"/>
-        <line x1="176" y1="348" x2="262" y2="268" stroke="#0f6e56" stroke-width="0.6" stroke-dasharray="3 4" opacity="0.35"/>
-        <line x1="164" y1="234" x2="248" y2="232" stroke="#993c1d" stroke-width="0.6" stroke-dasharray="3 4" opacity="0.35"/>
-        <line x1="176" y1="124" x2="262" y2="192" stroke="#854f0b" stroke-width="0.6" stroke-dasharray="3 4" opacity="0.35"/>
-
         <!-- Bottom label -->
         <text font-family="DM Mono,monospace" font-size="10" letter-spacing="1" fill="var(--ink-muted)" x="300" y="470" text-anchor="middle" opacity="0.6">DIRECTION FLOWS OUT  &#x2022;  RESULTS FLOW BACK</text>
       </svg>
@@ -910,7 +921,7 @@
 <!-- ═══════════════════════════════════════════════════════
      SLIDE 4 — THE NEW ROLES (Venn Diagrams)
      ═══════════════════════════════════════════════════════ -->
-<section class="slide" data-slide="4" style="padding:40px 48px;">
+<section class="slide slide--compact" data-slide="4">
   <div class="slide-split" style="gap:36px;align-items:stretch;">
 
     <!-- Left: Title, body, role list -->
@@ -918,10 +929,10 @@
       <div class="slide-eyebrow reveal" style="color:var(--sage)">
         The new roles
       </div>
-      <h2 class="slide-title reveal reveal-d1" style="font-size:50px;margin-bottom:6px;">
+      <h2 class="slide-title slide-title--md reveal reveal-d1" style="margin-bottom:6px;">
         AI collapses the boundaries<br><em>between disciplines.</em>
       </h2>
-      <p class="slide-body reveal reveal-d2" style="font-size:13px;margin-bottom:20px;">
+      <p class="slide-body slide-body--sm reveal reveal-d2" style="margin-bottom:20px;">
         Each agentic role absorbs capabilities that used to require dedicated specialists. Agents handle the execution — the person brings judgment and orchestration.
       </p>
 
@@ -932,47 +943,70 @@
         <div style="background:var(--paper-warm);border:1px solid #0f6e56;border-radius:8px;padding:12px 14px;">
           <div style="display:flex;align-items:center;gap:6px;margin-bottom:5px;">
             <svg width="18" height="18" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="none" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="2.5 1.5" opacity="0.45"/><circle cx="11" cy="11" r="7" fill="none" stroke="#534ab7" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.25"/><circle cx="11" cy="11" r="4.5" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.6"/></svg>
-            <div style="font-family:'DM Serif Display',serif;font-size:16px;color:var(--ink);line-height:1.2;">Agentic Engineer</div>
+            <div class="card-role-title">Agentic Engineer</div>
           </div>
           <div style="display:flex;flex-wrap:wrap;gap:3px;margin-bottom:4px;">
-            <span style="font-size:11px;background:#e1f5ee;color:#0f6e56;padding:2px 5px;border-radius:3px;">Developer</span>
-            <span style="font-size:11px;background:#faece7;color:#993c1d;padding:2px 5px;border-radius:3px;">QA Engineer</span>
-            <span style="font-size:11px;background:#eeedfe;color:#534ab7;padding:2px 5px;border-radius:3px;">DevOps</span>
+            <span class="card-badge" style="background:#e1f5ee;color:#0f6e56;">Developer</span>
+            <span class="card-badge" style="background:#faece7;color:#993c1d;">QA Engineer</span>
+            <span class="card-badge" style="background:#eeedfe;color:#534ab7;">DevOps</span>
           </div>
-          <div style="font-size:12px;color:var(--ink-muted);line-height:1.3;">Coding agents, Refactoring, Test generation (including QA in smaller teams), CI/CD pipeline</div>
+          <div class="card-desc">Coding agents, Refactoring, Test generation (including QA in smaller teams), CI/CD pipeline</div>
         </div>
 
         <!-- Agentic Architect -->
         <div style="background:var(--paper-warm);border:0.5px solid var(--line-strong);border-radius:8px;padding:12px 14px;">
           <div style="display:flex;align-items:center;gap:6px;margin-bottom:5px;">
             <svg width="18" height="18" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="none" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="2.5 1.5" opacity="0.45"/><circle cx="11" cy="11" r="7" fill="none" stroke="#534ab7" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.25"/><circle cx="11" cy="11" r="4.5" fill="#e8f0f8" stroke="#1a3a5c" stroke-width="0.6"/></svg>
-            <div style="font-family:'DM Serif Display',serif;font-size:16px;color:var(--ink);line-height:1.2;">Agentic Architect</div>
+            <div class="card-role-title">Agentic Architect</div>
           </div>
           <div style="display:flex;flex-wrap:wrap;gap:3px;margin-bottom:4px;">
-            <span style="font-size:11px;background:#e8f0f8;color:#1a3a5c;padding:2px 5px;border-radius:3px;">System Architect</span>
-            <span style="font-size:11px;background:#eeedfe;color:#534ab7;padding:2px 5px;border-radius:3px;">Tech Lead</span>
-            <span style="font-size:11px;background:#faece7;color:#993c1d;padding:2px 5px;border-radius:3px;">Security Lead</span>
+            <span class="card-badge" style="background:#e8f0f8;color:#1a3a5c;">System Architect</span>
+            <span class="card-badge" style="background:#eeedfe;color:#534ab7;">Tech Lead</span>
+            <span class="card-badge" style="background:#faece7;color:#993c1d;">Security Lead</span>
           </div>
-          <div style="font-size:12px;color:var(--ink-muted);line-height:1.3;">Architecture analysis, Code review, Security scanning, Perf profiling</div>
+          <div class="card-desc">Architecture analysis, Code review, Security scanning, Perf profiling</div>
         </div>
 
         <!-- Agentic PO/Designer -->
         <div style="background:var(--paper-warm);border:0.5px solid var(--line-strong);border-radius:8px;padding:12px 14px;">
           <div style="display:flex;align-items:center;gap:6px;margin-bottom:5px;">
             <svg width="18" height="18" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="none" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="2.5 1.5" opacity="0.45"/><circle cx="11" cy="11" r="7" fill="none" stroke="#534ab7" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.25"/><circle cx="11" cy="11" r="4.5" fill="#fdf3e3" stroke="#854f0b" stroke-width="0.6"/></svg>
-            <div style="font-family:'DM Serif Display',serif;font-size:16px;color:var(--ink);line-height:1.2;">Agentic PO/Designer</div>
+            <div class="card-role-title">Agentic PO/Designer</div>
           </div>
           <div style="display:flex;flex-wrap:wrap;gap:3px;margin-bottom:4px;">
-            <span style="font-size:11px;background:#fdf3e3;color:#854f0b;padding:2px 5px;border-radius:3px;">Product Owner</span>
-            <span style="font-size:11px;background:#fce8f3;color:#9b2c6e;padding:2px 5px;border-radius:3px;">UX Designer</span>
-            <span style="font-size:11px;background:#e8f0f8;color:#1a3a5c;padding:2px 5px;border-radius:3px;">Business Analyst</span>
+            <span class="card-badge" style="background:#fdf3e3;color:#854f0b;">Product Owner</span>
+            <span class="card-badge" style="background:#fce8f3;color:#9b2c6e;">UX Designer</span>
+            <span class="card-badge" style="background:#e8f0f8;color:#1a3a5c;">Business Analyst</span>
           </div>
-          <div style="font-size:12px;color:var(--ink-muted);line-height:1.3;">Research synthesis, Design generation, Competitive analysis, Specifications</div>
+          <div class="card-desc">Research synthesis, Design generation, Competitive analysis, Specifications</div>
         </div>
 
-        <!-- Additional roles note -->
-        <div style="font-size:12px;color:var(--ink-muted);line-height:1.5;padding:8px 14px;border-top:0.5px solid var(--line);margin-top:4px;">
-          <strong style="color:var(--ink-soft);">Larger teams add:</strong> Agentic QA (dedicated quality focus, visual regression, performance) and Agentic Delivery Engineer (sprint coordination, stakeholder reporting, release management).
+        <!-- Agentic QA -->
+        <div style="background:var(--paper-warm);border:0.5px solid var(--line-strong);border-radius:8px;padding:12px 14px;">
+          <div style="display:flex;align-items:center;gap:6px;margin-bottom:5px;">
+            <svg width="18" height="18" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="none" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="2.5 1.5" opacity="0.45"/><circle cx="11" cy="11" r="7" fill="none" stroke="#534ab7" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.25"/><circle cx="11" cy="11" r="4.5" fill="#faece7" stroke="#993c1d" stroke-width="0.6"/></svg>
+            <div class="card-role-title">Agentic QA</div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:3px;margin-bottom:4px;">
+            <span class="card-badge" style="background:#faece7;color:#993c1d;">QA Engineer</span>
+            <span class="card-badge" style="background:#fdf3e3;color:#854f0b;">Performance Tester</span>
+            <span class="card-badge" style="background:#eeedfe;color:#534ab7;">Visual QA</span>
+          </div>
+          <div class="card-desc">Dedicated quality focus, Visual regression, Performance benchmarking, Test strategy</div>
+        </div>
+
+        <!-- Agentic Delivery Engineer -->
+        <div style="background:var(--paper-warm);border:0.5px solid var(--line-strong);border-radius:8px;padding:12px 14px;">
+          <div style="display:flex;align-items:center;gap:6px;margin-bottom:5px;">
+            <svg width="18" height="18" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="none" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="2.5 1.5" opacity="0.45"/><circle cx="11" cy="11" r="7" fill="none" stroke="#534ab7" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.25"/><circle cx="11" cy="11" r="4.5" fill="#eeedfe" stroke="#534ab7" stroke-width="0.6"/></svg>
+            <div class="card-role-title">Agentic Delivery Engineer</div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:3px;margin-bottom:4px;">
+            <span class="card-badge" style="background:#eeedfe;color:#534ab7;">Project Manager</span>
+            <span class="card-badge" style="background:#e8f0f8;color:#1a3a5c;">Scrum Master</span>
+            <span class="card-badge" style="background:#fdf3e3;color:#854f0b;">Release Manager</span>
+          </div>
+          <div class="card-desc">Sprint coordination, Stakeholder reporting, Release management, Blocker removal</div>
         </div>
 
       </div>
@@ -980,7 +1014,7 @@
 
     <!-- Right: Large Venn Diagram -->
     <div class="slide-split-right reveal reveal-d2" style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;align-self:center;">
-      <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:8px;text-align:center;">How roles converge</div>
+      <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:8px;text-align:center;">How roles converge</div>
       <svg viewBox="0 0 560 470" width="100%" style="display:block;max-width:580px;">
         <!-- Development circle (top-left) -->
         <circle cx="195" cy="175" r="160" fill="#e1f5ee" fill-opacity="0.45" stroke="#0f6e56" stroke-width="0.75"/>
@@ -1021,323 +1055,771 @@
 
 
 <!-- ═══════════════════════════════════════════════════════
-     SLIDE 5 — HUMAN POWER (The Metric)
+     SLIDE 5 — MEASURING THE OLD WAY
      ═══════════════════════════════════════════════════════ -->
-<section class="slide" data-slide="5" style="padding:80px 72px;">
-  <div class="slide-split">
-    <div class="slide-split-left">
-      <div class="slide-eyebrow reveal" style="color:var(--ember)">
-        Measuring the multiplier
-      </div>
-      <h2 class="slide-title reveal reveal-d1">
-        Introducing<br><em>Human Power.</em>
-      </h2>
-      <p class="slide-body reveal reveal-d2" style="margin-bottom:24px;">
-        When the engine replaced the horse, we invented horsepower to explain the benefit in terms everyone understood. AI is replacing manual delivery. We need the same kind of mental model.
-      </p>
-      <div class="callout reveal reveal-d3">
-        <div class="callout-label">The unit</div>
-        <div class="callout-text">
-          <strong>1 HP = the sustained output of one skilled engineer, working without AI.</strong><br>
-          A baseline everyone in delivery understands intuitively.
-        </div>
-      </div>
-      <p class="slide-body reveal reveal-d4" style="margin-top:24px;font-size:15px;">
-        A peer-reviewed MIT/Microsoft study found developers using AI completed the same task in <strong>1 hour 11 minutes vs. 2 hours 41 minutes</strong> — 55% faster, apples to apples. Compound that across code volume, PR throughput, and onboarding time — AI now authors <strong>~27% of production code</strong>.
-      </p>
-      <p class="slide-body reveal reveal-d5" style="margin-top:12px;font-size:15px;">
-        Organizations building AI-native delivery workflows are compressing what used to take a sprint into a day. That's the <strong>10 HP trajectory</strong> we're positioning teams for — and the ceiling is still rising.
-      </p>
-      <p class="slide-body reveal reveal-d5" style="margin-top:10px;font-size:11px;color:var(--ink-muted);">
-        Source: Peng et al., "The Impact of AI on Developer Productivity" (arXiv:2302.06590) &middot; GitHub Research, 2023
-      </p>
-    </div>
-    <div class="slide-split-right reveal reveal-d2">
-      <svg viewBox="0 0 480 435" width="100%" style="display:block;overflow:visible;">
-        <!-- Title -->
-        <text font-family="DM Serif Display,serif" font-size="20" fill="var(--ink)" x="240" y="24" text-anchor="middle" dominant-baseline="central">Delivery Velocity Comparison</text>
-
-        <!-- Traditional team -->
-        <text font-family="DM Mono,monospace" font-size="10" letter-spacing="1" fill="var(--ink-muted)" x="20" y="70">10-PERSON TRADITIONAL SCRUM TEAM</text>
-
-        <!-- Person icons (10 circles, same size as agentic dots) -->
-        <g>
-          <circle cx="30" cy="95" r="10" fill="#faece7" stroke="#993c1d" stroke-width="0.75"/>
-          <circle cx="60" cy="95" r="10" fill="#faece7" stroke="#993c1d" stroke-width="0.75"/>
-          <circle cx="90" cy="95" r="10" fill="#faece7" stroke="#993c1d" stroke-width="0.75"/>
-          <circle cx="120" cy="95" r="10" fill="#faece7" stroke="#993c1d" stroke-width="0.75"/>
-          <circle cx="150" cy="95" r="10" fill="#faece7" stroke="#993c1d" stroke-width="0.75"/>
-          <circle cx="180" cy="95" r="10" fill="#faece7" stroke="#993c1d" stroke-width="0.75"/>
-          <circle cx="210" cy="95" r="10" fill="#faece7" stroke="#993c1d" stroke-width="0.75"/>
-          <circle cx="240" cy="95" r="10" fill="#faece7" stroke="#993c1d" stroke-width="0.75"/>
-          <circle cx="270" cy="95" r="10" fill="#faece7" stroke="#993c1d" stroke-width="0.75"/>
-          <circle cx="300" cy="95" r="10" fill="#faece7" stroke="#993c1d" stroke-width="0.75"/>
-        </g>
-
-        <!-- Bar: 1x baseline -->
-        <rect x="20" y="115" width="77" height="32" rx="6" fill="#faece7" stroke="#993c1d" stroke-width="0.75"/>
-        <text font-family="DM Serif Display,serif" font-size="18" fill="#712b13" x="58" y="135" text-anchor="middle" dominant-baseline="central">1x</text>
-        <text font-family="DM Mono,monospace" font-size="12" fill="#993c1d" x="108" y="135" dominant-baseline="central">10 HP</text>
-
-        <!-- Velocity label -->
-        <text font-family="Instrument Sans,sans-serif" font-size="11" fill="var(--ink-muted)" x="20" y="162">Traditional team velocity</text>
-
-        <!-- Cost: Traditional -->
-        <rect x="20" y="172" width="340" height="26" rx="5" fill="#faece7" stroke="#993c1d" stroke-width="0.5" opacity="0.6"/>
-        <text font-family="DM Mono,monospace" font-size="11" fill="#712b13" x="190" y="189" text-anchor="middle" dominant-baseline="central">~$294,000 burn / mo</text>
-        <text font-family="Instrument Sans,sans-serif" font-size="9" fill="var(--ink-muted)" x="20" y="210">at $175/hr effective rate</text>
-
-        <!-- Divider -->
-        <line x1="20" y1="215" x2="460" y2="215" stroke="var(--line-strong)" stroke-width="0.5"/>
-
-        <!-- Agentic team -->
-        <text font-family="DM Mono,monospace" font-size="10" letter-spacing="1" fill="var(--ink-muted)" x="20" y="245">5-PERSON AGENTIC TEAM</text>
-
-        <!-- AI-enabled engineer icons (person circle + AI amplification ring) -->
-        <g>
-          <!-- Engineer 1 -->
-          <circle cx="36" cy="270" r="14" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/>
-          <circle cx="36" cy="270" r="10" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/>
-          <circle cx="36" cy="270" r="6" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.75"/>
-          <!-- Engineer 2 -->
-          <circle cx="72" cy="270" r="14" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/>
-          <circle cx="72" cy="270" r="10" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/>
-          <circle cx="72" cy="270" r="6" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.75"/>
-          <!-- Engineer 3 -->
-          <circle cx="108" cy="270" r="14" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/>
-          <circle cx="108" cy="270" r="10" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/>
-          <circle cx="108" cy="270" r="6" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.75"/>
-          <!-- Engineer 4 -->
-          <circle cx="144" cy="270" r="14" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/>
-          <circle cx="144" cy="270" r="10" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/>
-          <circle cx="144" cy="270" r="6" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.75"/>
-          <!-- Engineer 5 -->
-          <circle cx="180" cy="270" r="14" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/>
-          <circle cx="180" cy="270" r="10" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/>
-          <circle cx="180" cy="270" r="6" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.75"/>
-        </g>
-        <!-- Legend -->
-        <circle cx="210" cy="270" r="3" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.5"/>
-        <circle cx="210" cy="270" r="6" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 1.5" opacity="0.5"/>
-        <text font-family="Instrument Sans,sans-serif" font-size="10" fill="var(--ink-muted)" x="220" y="270" dominant-baseline="central">= AI-enabled engineer</text>
-
-        <!-- Bar: 10x -->
-        <rect x="20" y="290" width="384" height="32" rx="6" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.75"/>
-        <text font-family="DM Serif Display,serif" font-size="18" fill="#085041" x="212" y="310" text-anchor="middle" dominant-baseline="central">10x</text>
-        <text font-family="DM Mono,monospace" font-size="12" fill="#0f6e56" x="415" y="310" dominant-baseline="central">~50 HP</text>
-
-        <!-- Velocity label -->
-        <text font-family="Instrument Sans,sans-serif" font-size="11" fill="var(--ink-muted)" x="20" y="337">Agent-enabled team velocity</text>
-
-        <!-- Cost: Agentic -->
-        <rect x="20" y="347" width="170" height="26" rx="5" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.5" opacity="0.6"/>
-        <text font-family="DM Mono,monospace" font-size="11" fill="#085041" x="105" y="364" text-anchor="middle" dominant-baseline="central">~$147,000 burn / mo</text>
-        <text font-family="Instrument Sans,sans-serif" font-size="9" fill="var(--ink-muted)" x="20" y="385">at $175/hr effective rate  *Plus agent compute costs, which scale with usage not headcount</text>
-
-        <!-- Cost per HP comparison -->
-        <line x1="20" y1="400" x2="460" y2="400" stroke="var(--line-strong)" stroke-width="0.5" stroke-dasharray="3 3"/>
-        <text font-family="DM Mono,monospace" font-size="11" fill="var(--ink-muted)" x="20" y="420">COST PER HP:</text>
-        <text font-family="DM Mono,monospace" font-size="11" fill="#712b13" x="130" y="420">Traditional ~$29,400/HP/mo</text>
-        <text font-family="DM Mono,monospace" font-size="11" fill="#085041" x="320" y="420">Agentic ~$2,940/HP/mo</text>
-      </svg>
-    </div>
+<section class="slide slide--compact" data-slide="5">
+  <div class="slide-eyebrow reveal" style="color:var(--ember)">
+    The measurement problem
   </div>
-</section>
-
-
-<!-- ═══════════════════════════════════════════════════════
-     SLIDE 6 — TEAM CONFIGURATIONS & SCALING
-     ═══════════════════════════════════════════════════════ -->
-<section class="slide" data-slide="6" style="padding:40px 48px;">
-  <div class="slide-eyebrow reveal" style="color:var(--sage)">
-    Flexible by design
-  </div>
-  <h2 class="slide-title reveal reveal-d1" style="font-size:30px;margin-bottom:6px;">
-    Right-size the team. <em>Scale when you need to.</em>
+  <h2 class="slide-title slide-title--sm reveal reveal-d1" style="margin-bottom:6px;">
+    Measuring for <em>impact,</em> not just activity.
   </h2>
-  <p class="slide-body reveal reveal-d2" style="font-size:14px;margin-bottom:20px;max-width:720px;">
-    Every person brings their agent fleet. Teams scale from two to ten without losing velocity — just add pods.
+  <p class="slide-body slide-body--sm reveal reveal-d2" style="margin-bottom:16px;max-width:760px;">
+    Traditional teams tracked what was easy to count. But the metrics that actually indicate performance were rarely tracked — and when they were, the tooling was inconsistent at best.
   </p>
 
-  <!-- ── Team Configurations ── -->
-  <div class="reveal reveal-d3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:1000px;margin-bottom:20px;">
+  <!-- Role cards + shift graphic side by side -->
+  <div style="display:flex;align-items:stretch;gap:24px;">
 
-    <!-- Strike Force (2 people) -->
-    <div style="background:var(--paper-warm);border:0.5px solid var(--line-strong);border-radius:12px;padding:20px 18px;display:flex;flex-direction:column;">
-      <div style="font-family:'DM Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--sage);margin-bottom:2px;">Focused</div>
-      <div style="font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);line-height:1.1;margin-bottom:4px;">2 people</div>
-      <div style="font-size:13px;color:var(--ink-muted);margin-bottom:12px;">Rapid fixes, spikes, targeted delivery</div>
-      <!-- AI-enabled dots -->
-      <div style="display:flex;gap:16px;margin-bottom:14px;padding:8px 0;">
-        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.75"/></svg>
-        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.75"/></svg>
+  <!-- Two-column, 3 roles per column -->
+  <div class="reveal reveal-d3" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;flex:1;min-width:0;">
+
+    <!-- Software Engineer -->
+    <div style="background:var(--paper-warm);border-radius:10px;padding:14px 16px;border:0.5px solid var(--line-strong);">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+        <div style="width:26px;height:26px;border-radius:6px;background:#e1f5ee;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;color:#0f6e56;">SE</div>
+        <div class="card-role-title">Software Engineer</div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:5px;">
-        <div style="display:flex;align-items:center;gap:7px;">
-          <div style="width:7px;height:7px;border-radius:50%;background:#0f6e56;flex-shrink:0;"></div>
-          <span style="font-size:14px;color:var(--ink-soft);">Agentic Engineer</span>
-        </div>
-        <div style="display:flex;align-items:center;gap:7px;">
-          <div style="width:7px;height:7px;border-radius:50%;background:#0f6e56;flex-shrink:0;"></div>
-          <span style="font-size:14px;color:var(--ink-soft);">Agentic Engineer</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Pathfinder (3 people) -->
-    <div style="background:var(--paper-warm);border:0.5px solid var(--line-strong);border-radius:12px;padding:20px 18px;display:flex;flex-direction:column;">
-      <div style="font-family:'DM Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--rail);margin-bottom:2px;">Balanced</div>
-      <div style="font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);line-height:1.1;margin-bottom:4px;">3 people</div>
-      <div style="font-size:13px;color:var(--ink-muted);margin-bottom:12px;">New features, integrations, product discovery</div>
-      <!-- AI-enabled dots -->
-      <div style="display:flex;gap:16px;margin-bottom:14px;padding:8px 0;">
-        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#e8f0f8" stroke="#1a3a5c" stroke-width="0.75"/></svg>
-        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.75"/></svg>
-        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#fdf3e3" stroke="#854f0b" stroke-width="0.75"/></svg>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:5px;">
-        <div style="display:flex;align-items:center;gap:7px;">
-          <div style="width:7px;height:7px;border-radius:50%;background:#1a3a5c;flex-shrink:0;"></div>
-          <span style="font-size:14px;color:var(--ink-soft);">Agentic Architect</span>
-        </div>
-        <div style="display:flex;align-items:center;gap:7px;">
-          <div style="width:7px;height:7px;border-radius:50%;background:#0f6e56;flex-shrink:0;"></div>
-          <span style="font-size:14px;color:var(--ink-soft);">Agentic Engineer</span>
-        </div>
-        <div style="display:flex;align-items:center;gap:7px;">
-          <div style="width:7px;height:7px;border-radius:50%;background:#854f0b;flex-shrink:0;"></div>
-          <span style="font-size:14px;color:var(--ink-soft);">Agentic PO/Designer</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Full Spectrum (5 people) -->
-    <div style="background:var(--paper-warm);border:0.5px solid var(--line-strong);border-radius:12px;padding:20px 18px;display:flex;flex-direction:column;">
-      <div style="font-family:'DM Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ember);margin-bottom:2px;">Comprehensive</div>
-      <div style="font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);line-height:1.1;margin-bottom:4px;">5 people</div>
-      <div style="font-size:13px;color:var(--ink-muted);margin-bottom:12px;">Complex builds, new products, end-to-end</div>
-      <!-- AI-enabled dots -->
-      <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:14px;padding:8px 0;">
-        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#e8f0f8" stroke="#1a3a5c" stroke-width="0.75"/></svg>
-        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.75"/></svg>
-        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#faece7" stroke="#993c1d" stroke-width="0.75"/></svg>
-        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#fdf3e3" stroke="#854f0b" stroke-width="0.75"/></svg>
-        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#eeedfe" stroke="#534ab7" stroke-width="0.75"/></svg>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:5px;">
-        <div style="display:flex;align-items:center;gap:7px;">
-          <div style="width:7px;height:7px;border-radius:50%;background:#1a3a5c;flex-shrink:0;"></div>
-          <span style="font-size:14px;color:var(--ink-soft);">Agentic Architect</span>
-        </div>
-        <div style="display:flex;align-items:center;gap:7px;">
-          <div style="width:7px;height:7px;border-radius:50%;background:#0f6e56;flex-shrink:0;"></div>
-          <span style="font-size:14px;color:var(--ink-soft);">Agentic Engineer</span>
-        </div>
-        <div style="display:flex;align-items:center;gap:7px;">
-          <div style="width:7px;height:7px;border-radius:50%;background:#993c1d;flex-shrink:0;"></div>
-          <span style="font-size:14px;color:var(--ink-soft);">Agentic QA</span>
-        </div>
-        <div style="display:flex;align-items:center;gap:7px;">
-          <div style="width:7px;height:7px;border-radius:50%;background:#854f0b;flex-shrink:0;"></div>
-          <span style="font-size:14px;color:var(--ink-soft);">Agentic PO/Designer</span>
-        </div>
-        <div style="display:flex;align-items:center;gap:7px;">
-          <div style="width:7px;height:7px;border-radius:50%;background:#534ab7;flex-shrink:0;"></div>
-          <span style="font-size:14px;color:var(--ink-soft);">Agentic Delivery Engineer</span>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- ── Transition note ── -->
-  <p class="reveal reveal-d3" style="font-size:13px;color:var(--ink-muted);max-width:1000px;margin-bottom:8px;font-style:italic;">These configurations are building blocks — combine them for larger programs.</p>
-
-  <!-- ── Divider ── -->
-  <div class="reveal reveal-d3" style="display:flex;align-items:center;gap:12px;max-width:1000px;margin-bottom:16px;">
-    <div style="flex:1;height:0.5px;background:var(--line-strong);"></div>
-    <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.1em;color:var(--ink-muted);text-transform:uppercase;">Scales to</div>
-    <div style="flex:1;height:0.5px;background:var(--line-strong);"></div>
-  </div>
-
-  <!-- ── Program Scale (10 people) ── -->
-  <div class="reveal reveal-d4" style="max-width:1000px;">
-
-    <!-- Engagement Leadership -->
-    <div style="background:#e8f0f8;border:0.75px solid #1a3a5c;border-radius:8px;padding:10px 20px;display:flex;align-items:center;justify-content:center;gap:36px;margin-bottom:3px;">
-      <div style="display:flex;align-items:center;gap:8px;">
-        <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="12" cy="12" r="8" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="12" cy="12" r="5" fill="white" stroke="#1a3a5c" stroke-width="0.75"/></svg>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
         <div>
-          <div style="font-family:'DM Serif Display',serif;font-size:15px;color:#1a3a5c;line-height:1.2;">Agentic Architect</div>
-          <div style="font-size:11px;color:var(--ink-muted);">Technical coherence across all pods</div>
+          <div class="card-section-label" style="color:var(--ink-muted);">Activity tracked</div>
+          <div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:5px;">
+            <span class="card-badge" style="background:#faece7;color:#993c1d;">Story points</span>
+            <span class="card-badge" style="background:#faece7;color:#993c1d;">PR throughput</span>
+            <span class="card-badge" style="background:#faece7;color:#993c1d;">Lines of code</span>
+          </div>
+          <div class="card-desc">Measures busyness, not value. Estimates inflate, velocity varies wildly across teams, and none of it tells you if the feature actually shipped.</div>
+        </div>
+        <div style="border-left:2px solid var(--sage);padding-left:10px;">
+          <div class="card-section-label" style="color:var(--sage);">Impact metric</div>
+          <div style="font-size:12px;color:var(--ink-soft);line-height:1.4;font-weight:500;margin-bottom:3px;">Cycle time</div>
+          <div class="card-desc">The only metric that answers "how long from idea to production?" Fast cycle time means fewer handoffs, less WIP, and faster feedback loops.</div>
         </div>
       </div>
-      <div style="width:1px;height:24px;background:#1a3a5c;opacity:0.2;"></div>
-      <div style="display:flex;align-items:center;gap:8px;">
-        <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="12" cy="12" r="8" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="12" cy="12" r="5" fill="white" stroke="#534ab7" stroke-width="0.75"/></svg>
+    </div>
+
+    <!-- Software Architect -->
+    <div style="background:var(--paper-warm);border-radius:10px;padding:14px 16px;border:0.5px solid var(--line-strong);">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+        <div style="width:26px;height:26px;border-radius:6px;background:#e8f0f8;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;color:#1a3a5c;">SA</div>
+        <div class="card-role-title">Software Architect</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
         <div>
-          <div style="font-family:'DM Serif Display',serif;font-size:15px;color:#534ab7;line-height:1.2;">Agentic Delivery Engineer</div>
-          <div style="font-size:11px;color:var(--ink-muted);">Program coordination, stakeholders, risk</div>
+          <div class="card-section-label" style="color:var(--ink-muted);">Activity tracked</div>
+          <div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:5px;">
+            <span class="card-badge" style="background:#faece7;color:#993c1d;">Design docs</span>
+            <span class="card-badge" style="background:#faece7;color:#993c1d;">Tech debt scores</span>
+          </div>
+          <div class="card-desc">Counting documents produced says nothing about whether the decisions in them were correct. Most architecture quality is assessed by gut feel in retros.</div>
+        </div>
+        <div style="border-left:2px solid var(--sage);padding-left:10px;">
+          <div class="card-section-label" style="color:var(--sage);">Impact metric</div>
+          <div style="font-size:12px;color:var(--ink-soft);line-height:1.4;font-weight:500;margin-bottom:3px;">Downstream rework rate</div>
+          <div class="card-desc">A good architectural decision holds up. A bad one causes rework weeks later. This metric traces implementation churn back to the decision that caused it.</div>
         </div>
       </div>
     </div>
 
-    <!-- Connector lines -->
-    <div style="display:flex;justify-content:space-around;padding:0 80px;">
-      <div style="width:1px;height:12px;background:var(--line-strong);"></div>
-      <div style="width:1px;height:12px;background:var(--line-strong);"></div>
-      <div style="width:1px;height:12px;background:var(--line-strong);"></div>
+    <!-- QA Tester -->
+    <div style="background:var(--paper-warm);border-radius:10px;padding:14px 16px;border:0.5px solid var(--line-strong);">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+        <div style="width:26px;height:26px;border-radius:6px;background:#fdf3e3;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;color:#854f0b;">QA</div>
+        <div class="card-role-title">QA Tester</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+        <div>
+          <div class="card-section-label" style="color:var(--ink-muted);">Activity tracked</div>
+          <div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:5px;">
+            <span class="card-badge" style="background:#faece7;color:#993c1d;">Test cases written</span>
+            <span class="card-badge" style="background:#faece7;color:#993c1d;">Coverage %</span>
+          </div>
+          <div class="card-desc">High coverage and lots of test cases can still miss critical bugs. Volume of tests doesn't equal quality of testing — shallow tests pass easily and catch nothing.</div>
+        </div>
+        <div style="border-left:2px solid var(--sage);padding-left:10px;">
+          <div class="card-section-label" style="color:var(--sage);">Impact metric</div>
+          <div style="font-size:12px;color:var(--ink-soft);line-height:1.4;font-weight:500;margin-bottom:3px;">Defect detection rate</div>
+          <div class="card-desc">What percentage of bugs are caught before production? This is the only QA metric that directly measures whether testing is actually protecting users.</div>
+        </div>
+      </div>
     </div>
 
-    <!-- Three pods -->
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
-
-      <!-- Pod A: Core Platform -->
-      <div style="background:var(--paper-warm);border:0.5px solid var(--line-strong);border-radius:8px;padding:14px 14px;">
-        <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--sage);margin-bottom:6px;">Core Platform &nbsp;&#x2022;&nbsp; 3 people</div>
-        <div style="display:flex;gap:10px;margin-bottom:8px;">
-          <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="none" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="2.5 1.5" opacity="0.45"/><circle cx="11" cy="11" r="7" fill="none" stroke="#534ab7" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.25"/><circle cx="11" cy="11" r="4.5" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.6"/></svg>
-          <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="none" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="2.5 1.5" opacity="0.45"/><circle cx="11" cy="11" r="7" fill="none" stroke="#534ab7" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.25"/><circle cx="11" cy="11" r="4.5" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.6"/></svg>
-          <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="none" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="2.5 1.5" opacity="0.45"/><circle cx="11" cy="11" r="7" fill="none" stroke="#534ab7" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.25"/><circle cx="11" cy="11" r="4.5" fill="#faece7" stroke="#993c1d" stroke-width="0.6"/></svg>
+    <!-- DevOps -->
+    <div style="background:var(--paper-warm);border-radius:10px;padding:14px 16px;border:0.5px solid var(--line-strong);">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+        <div style="width:26px;height:26px;border-radius:6px;background:#faece7;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;color:#993c1d;">DO</div>
+        <div class="card-role-title">DevOps Engineer</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+        <div>
+          <div class="card-section-label" style="color:var(--ink-muted);">Activity tracked</div>
+          <div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:5px;">
+            <span class="card-badge" style="background:#faece7;color:#993c1d;">Deploy frequency</span>
+            <span class="card-badge" style="background:#faece7;color:#993c1d;">Provisioning time</span>
+          </div>
+          <div class="card-desc">Deploying often is good, but it says nothing about reliability. Teams can deploy ten times a day and still have systems that break constantly.</div>
         </div>
-        <div style="font-size:12px;color:var(--ink-muted);line-height:1.4;">Agentic Engineer x2 + Agentic QA</div>
+        <div style="border-left:2px solid var(--sage);padding-left:10px;">
+          <div class="card-section-label" style="color:var(--sage);">Impact metric</div>
+          <div style="font-size:12px;color:var(--ink-soft);line-height:1.4;font-weight:500;margin-bottom:3px;">Recovery time</div>
+          <div class="card-desc">When something breaks in production, how fast is it fixed? This measures the thing customers actually feel — downtime — not how busy the pipeline looks.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PM/PO/SM -->
+    <div style="background:var(--paper-warm);border-radius:10px;padding:14px 16px;border:0.5px solid var(--line-strong);">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+        <div style="width:26px;height:26px;border-radius:6px;background:#eeedfe;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;color:#534ab7;">PM</div>
+        <div class="card-role-title">PM / PO / Scrum Master</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+        <div>
+          <div class="card-section-label" style="color:var(--ink-muted);">Activity tracked</div>
+          <div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:5px;">
+            <span class="card-badge" style="background:#faece7;color:#993c1d;">Sprint completion</span>
+            <span class="card-badge" style="background:#faece7;color:#993c1d;">Overhead hours</span>
+          </div>
+          <div class="card-desc">Completing sprints on paper is easy when you cut scope or shift dates. These metrics reward process compliance, not actual delivery outcomes.</div>
+        </div>
+        <div style="border-left:2px solid var(--sage);padding-left:10px;">
+          <div class="card-section-label" style="color:var(--sage);">Impact metric</div>
+          <div style="font-size:12px;color:var(--ink-soft);line-height:1.4;font-weight:500;margin-bottom:3px;">On-time delivery rate</div>
+          <div class="card-desc">Did the thing ship when you said it would? Predictability is the PM's real deliverable — stakeholders plan around your commitments.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- UI/UX Designer -->
+    <div style="background:var(--paper-warm);border-radius:10px;padding:14px 16px;border:0.5px solid var(--line-strong);">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+        <div style="width:26px;height:26px;border-radius:6px;background:#fce8f3;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;color:#9b2c6e;">UX</div>
+        <div class="card-role-title">UI/UX Designer</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+        <div>
+          <div class="card-section-label" style="color:var(--ink-muted);">Activity tracked</div>
+          <div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:5px;">
+            <span class="card-badge" style="background:#faece7;color:#993c1d;">Screens per sprint</span>
+            <span class="card-badge" style="background:#faece7;color:#993c1d;">Design system coverage</span>
+          </div>
+          <div class="card-desc">Producing screens quickly means nothing if they require endless revision cycles. Output speed masks design quality problems until they surface in development.</div>
+        </div>
+        <div style="border-left:2px solid var(--sage);padding-left:10px;">
+          <div class="card-section-label" style="color:var(--sage);">Impact metric</div>
+          <div style="font-size:12px;color:var(--ink-soft);line-height:1.4;font-weight:500;margin-bottom:3px;">Iteration cycles to approval</div>
+          <div class="card-desc">How many rounds of revision before stakeholders sign off? Fewer cycles means the designer understood the problem upfront and nailed the solution early.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Right side: The Shift — Before/After -->
+  <div class="reveal reveal-d4" style="flex:0 0 240px;display:flex;flex-direction:column;justify-content:center;border-left:2px solid var(--line-strong);padding-left:24px;">
+    <div style="font-family:'DM Serif Display',serif;font-size:16px;color:var(--ink);line-height:1.3;margin-bottom:20px;">The questions change</div>
+
+    <div style="display:flex;flex-direction:column;gap:16px;">
+      <!-- Shift 1 -->
+      <div>
+        <div style="font-size:13px;color:var(--ink-muted);text-decoration:line-through;margin-bottom:4px;">How busy are you?</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:17px;color:#0f6e56;line-height:1.25;">Did the outcome stick?</div>
       </div>
 
-      <!-- Pod B: Feature Delivery -->
-      <div style="background:var(--paper-warm);border:0.5px solid var(--line-strong);border-radius:8px;padding:14px 14px;">
-        <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;">Feature Delivery &nbsp;&#x2022;&nbsp; 3 people</div>
-        <div style="display:flex;gap:10px;margin-bottom:8px;">
-          <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="none" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="2.5 1.5" opacity="0.45"/><circle cx="11" cy="11" r="7" fill="none" stroke="#534ab7" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.25"/><circle cx="11" cy="11" r="4.5" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.6"/></svg>
-          <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="none" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="2.5 1.5" opacity="0.45"/><circle cx="11" cy="11" r="7" fill="none" stroke="#534ab7" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.25"/><circle cx="11" cy="11" r="4.5" fill="#fdf3e3" stroke="#854f0b" stroke-width="0.6"/></svg>
-          <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="none" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="2.5 1.5" opacity="0.45"/><circle cx="11" cy="11" r="7" fill="none" stroke="#534ab7" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.25"/><circle cx="11" cy="11" r="4.5" fill="#faece7" stroke="#993c1d" stroke-width="0.6"/></svg>
-        </div>
-        <div style="font-size:12px;color:var(--ink-muted);line-height:1.4;">Agentic Engineer + Agentic PO/Designer + Agentic QA</div>
+      <!-- Shift 2 -->
+      <div>
+        <div style="font-size:13px;color:var(--ink-muted);text-decoration:line-through;margin-bottom:4px;">Per-role silos</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:17px;color:#0f6e56;line-height:1.25;">End-to-end ownership</div>
       </div>
 
-      <!-- Pod C: Integration & Migration -->
-      <div style="background:var(--paper-warm);border:0.5px solid var(--line-strong);border-radius:8px;padding:14px 14px;">
-        <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--rail);margin-bottom:6px;">Integration &nbsp;&#x2022;&nbsp; 2 people</div>
-        <div style="display:flex;gap:10px;margin-bottom:8px;">
-          <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="none" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="2.5 1.5" opacity="0.45"/><circle cx="11" cy="11" r="7" fill="none" stroke="#534ab7" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.25"/><circle cx="11" cy="11" r="4.5" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.6"/></svg>
-          <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="none" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="2.5 1.5" opacity="0.45"/><circle cx="11" cy="11" r="7" fill="none" stroke="#534ab7" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.25"/><circle cx="11" cy="11" r="4.5" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.6"/></svg>
-        </div>
-        <div style="font-size:12px;color:var(--ink-muted);line-height:1.4;">Agentic Engineer x2</div>
+      <!-- Shift 3 -->
+      <div>
+        <div style="font-size:13px;color:var(--ink-muted);text-decoration:line-through;margin-bottom:4px;">Volume = performance</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:17px;color:#0f6e56;line-height:1.25;">Durability = performance</div>
       </div>
-
     </div>
   </div>
 
-  <div class="reveal reveal-d4" style="margin-top:16px;font-family:'DM Mono',monospace;font-size:11px;color:var(--ink-muted);letter-spacing:0.04em;text-align:center;">
-    2 TO 10 PEOPLE &nbsp;&#x2022;&nbsp; SAME BUILDING BLOCKS &nbsp;&#x2022;&nbsp; UNLIMITED AGENT WORKFLOWS
+  </div><!-- end flex row -->
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     SLIDE 6 — THE AGENTIC ENGINEER, MEASURED
+     ═══════════════════════════════════════════════════════ -->
+<section class="slide slide--semi-compact" data-slide="6">
+  <div class="slide-split" style="gap:48px;">
+    <div class="slide-split-left">
+      <div class="slide-eyebrow reveal" style="color:var(--sage)">
+        Signal over noise
+      </div>
+      <h2 class="slide-title slide-title--sm reveal reveal-d1">
+        The Agentic Engineer,<br><em>measured for impact.</em>
+      </h2>
+
+      <!-- Absorbs badge -->
+      <div class="reveal reveal-d2" style="display:inline-flex;align-items:center;gap:8px;background:#e1f5ee;border:1px solid #0f6e56;border-radius:20px;padding:6px 16px;margin-bottom:20px;">
+        <svg width="20" height="20" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="none" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="2.5 1.5" opacity="0.45"/><circle cx="11" cy="11" r="7" fill="none" stroke="#534ab7" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.25"/><circle cx="11" cy="11" r="4.5" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.6"/></svg>
+        <span style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#085041;">ABSORBS: DEV + QA + DEVOPS</span>
+      </div>
+
+      <!-- Noise metrics — visually dismissed -->
+      <div class="reveal reveal-d2" style="margin-bottom:20px;">
+        <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:8px;">Noise (what you do NOT measure)</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;">
+          <span style="background:#faece7;color:#993c1d;font-size:12px;padding:4px 10px;border-radius:4px;text-decoration:line-through;opacity:0.6;">Agent tasks dispatched</span>
+          <span style="background:#faece7;color:#993c1d;font-size:12px;padding:4px 10px;border-radius:4px;text-decoration:line-through;opacity:0.6;">PRs merged</span>
+          <span style="background:#faece7;color:#993c1d;font-size:12px;padding:4px 10px;border-radius:4px;text-decoration:line-through;opacity:0.6;">Test suites triggered</span>
+          <span style="background:#faece7;color:#993c1d;font-size:12px;padding:4px 10px;border-radius:4px;text-decoration:line-through;opacity:0.6;">Deploys executed</span>
+        </div>
+      </div>
+
+      <!-- Signal callout -->
+      <div class="callout callout--compact reveal reveal-d3" style="border-left-color:#0f6e56;max-width:540px;">
+        <div class="callout-label" style="color:#0f6e56;">Three impact metrics</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:18px;color:var(--ink);line-height:1.25;margin-bottom:10px;">The Agentic Engineer's goal is fast, clean delivery. Three metrics tell you if they're achieving it.</div>
+        <ul class="callout-text callout-text--sm" style="margin-bottom:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;">
+          <li><strong>Feature Cycle Time</strong> — how fast does work move from first commit to production? Fewer handoffs mean faster flow.</li>
+          <li><strong>QA Pass Rate</strong> — is speed coming at the cost of quality? Builds must pass automated checks before they ship.</li>
+          <li><strong>Deploy Stability</strong> — did the work hold up? No rollback within 48 hours means it landed clean.</li>
+        </ul>
+      </div>
+
+      <!-- Key insight -->
+      <p class="slide-body slide-body--sm reveal reveal-d4" style="margin-top:20px;max-width:520px;">
+        In the old model, correlating a developer's code to its QA outcome and deploy stability required tracing across <strong>three separate roles</strong>. The Agentic Engineer owns all three — making the correlation automatic.
+      </p>
+    </div>
+
+    <div class="slide-split-right reveal reveal-d3" style="align-items:stretch;">
+      <div style="display:flex;flex-direction:column;gap:0;position:relative;">
+
+        <!-- Toggle button -->
+        <div style="display:flex;justify-content:flex-end;margin-bottom:10px;">
+          <button id="metricViewToggle" onclick="toggleMetricView()" style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.04em;background:var(--paper-warm);border:1px solid var(--line-strong);border-radius:6px;padding:6px 14px;cursor:pointer;color:var(--ink-soft);transition:all 0.2s ease;">
+            Show dashboard &#x2192;
+          </button>
+        </div>
+
+        <!-- VIEW 1: What we measure (Source / Tools / Target) -->
+        <div id="metricViewDefinitions" style="display:flex;flex-direction:column;gap:12px;transition:opacity 0.3s ease;">
+
+          <!-- Formula bar -->
+          <div style="background:#085041;border-radius:8px;padding:14px 20px;text-align:center;">
+            <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.1em;color:rgba(255,255,255,0.5);margin-bottom:4px;">THE FORMULA</div>
+            <div style="font-family:'DM Serif Display',serif;font-size:16px;color:white;line-height:1.3;">Feature Cycle Time + QA Pass Rate + Deploy Stability<br><span style="font-size:14px;opacity:0.7;">= Fast, Clean Delivery</span></div>
+          </div>
+
+          <!-- Variable 1: Cycle Time -->
+          <div style="background:var(--paper-warm);border-radius:8px;padding:14px 16px;border:0.5px solid var(--line-strong);">
+            <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;">
+              <div class="card-role-title">Feature Cycle Time</div>
+              <div style="font-family:'DM Mono',monospace;font-size:11px;color:var(--ink-muted);letter-spacing:0.04em;">first commit &#x2192; production deploy</div>
+            </div>
+            <div style="display:grid;grid-template-columns:auto 1fr;gap:6px 10px;font-size:12px;">
+              <div style="font-family:'DM Mono',monospace;font-size:11px;color:#0f6e56;">Source</div>
+              <div style="color:var(--ink-soft);">Git timestamps + CI/CD pipeline logs</div>
+              <div style="font-family:'DM Mono',monospace;font-size:11px;color:#0f6e56;">Tools</div>
+              <div style="color:var(--ink-soft);">LinearB, Sleuth, GitHub Actions, or GitLab CI</div>
+              <div style="font-family:'DM Mono',monospace;font-size:11px;color:#0f6e56;">Target</div>
+              <div style="color:var(--ink-soft);">Median cycle time trending down sprint-over-sprint</div>
+            </div>
+          </div>
+
+          <!-- Variable 2: QA Pass Rate -->
+          <div style="background:var(--paper-warm);border-radius:8px;padding:14px 16px;border:0.5px solid var(--line-strong);">
+            <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;">
+              <div class="card-role-title">QA Pass Rate</div>
+              <div style="font-family:'DM Mono',monospace;font-size:11px;color:var(--ink-muted);letter-spacing:0.04em;">% of builds passing automated quality checks</div>
+            </div>
+            <div style="display:grid;grid-template-columns:auto 1fr;gap:6px 10px;font-size:12px;">
+              <div style="font-family:'DM Mono',monospace;font-size:11px;color:#0f6e56;">Source</div>
+              <div style="color:var(--ink-soft);">Test suite results per build (unit, integration, e2e)</div>
+              <div style="font-family:'DM Mono',monospace;font-size:11px;color:#0f6e56;">Tools</div>
+              <div style="color:var(--ink-soft);">CI test reporters, Allure, TestRail, or Zephyr</div>
+              <div style="font-family:'DM Mono',monospace;font-size:11px;color:#0f6e56;">Target</div>
+              <div style="color:var(--ink-soft);">&#x2265;95% pass rate on gated builds before deploy</div>
+            </div>
+          </div>
+
+          <!-- Variable 3: Deploy Stability -->
+          <div style="background:var(--paper-warm);border-radius:8px;padding:14px 16px;border:0.5px solid var(--line-strong);">
+            <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;">
+              <div class="card-role-title">Deploy Stability</div>
+              <div style="font-family:'DM Mono',monospace;font-size:11px;color:var(--ink-muted);letter-spacing:0.04em;">no rollback within 48 hours = clean</div>
+            </div>
+            <div style="display:grid;grid-template-columns:auto 1fr;gap:6px 10px;font-size:12px;">
+              <div style="font-family:'DM Mono',monospace;font-size:11px;color:#0f6e56;">Source</div>
+              <div style="color:var(--ink-soft);">Deployment logs + incident/rollback events</div>
+              <div style="font-family:'DM Mono',monospace;font-size:11px;color:#0f6e56;">Tools</div>
+              <div style="color:var(--ink-soft);">PagerDuty, Opsgenie, ArgoCD, or deploy pipeline flags</div>
+              <div style="font-family:'DM Mono',monospace;font-size:11px;color:#0f6e56;">Target</div>
+              <div style="color:var(--ink-soft);">&#x2265;90% of deploys survive 48h without rollback</div>
+            </div>
+          </div>
+
+          <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.06em;color:var(--ink-muted);text-align:center;padding:4px 0;">
+            WHAT WE MEASURE &middot; WHERE THE DATA LIVES &middot; WHAT GOOD LOOKS LIKE
+          </div>
+        </div>
+
+        <!-- VIEW 2: Dashboard visualization (hidden by default) -->
+        <div id="metricViewDashboard" style="display:none;flex-direction:column;gap:0;transition:opacity 0.3s ease;">
+
+          <div style="background:white;border-radius:14px;overflow:hidden;border:0.5px solid var(--line-strong);">
+            <!-- Dashboard header -->
+            <div style="padding:14px 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);">
+              <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.1em;color:var(--ink-muted);">AGENTIC ENGINEER DASHBOARD</div>
+              <div style="font-family:'DM Mono',monospace;font-size:11px;color:var(--line-strong);">Sprint 14 &middot; Last 5 sprints</div>
+            </div>
+
+            <!-- Three metric panels -->
+            <div style="display:grid;grid-template-columns:1fr;gap:0;">
+
+              <!-- Metric 1: Feature Cycle Time -->
+              <div style="padding:18px 20px;border-bottom:1px solid var(--line);">
+                <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:10px;">
+                  <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-muted);">Feature Cycle Time</div>
+                  <div style="display:flex;align-items:baseline;gap:8px;">
+                    <span style="font-family:'DM Serif Display',serif;font-size:28px;color:var(--ink);letter-spacing:-0.02em;">2.1d</span>
+                    <span style="font-family:'DM Mono',monospace;font-size:11px;color:#0f6e56;">&#x25BC; 38%</span>
+                  </div>
+                </div>
+                <svg viewBox="0 0 400 44" width="100%" style="display:block;">
+                  <line x1="0" y1="14" x2="400" y2="14" stroke="var(--line)" stroke-width="0.5"/>
+                  <line x1="0" y1="28" x2="400" y2="28" stroke="var(--line)" stroke-width="0.5"/>
+                  <line x1="0" y1="42" x2="400" y2="42" stroke="var(--line)" stroke-width="0.5"/>
+                  <defs><linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0f6e56" stop-opacity="0.15"/><stop offset="100%" stop-color="#0f6e56" stop-opacity="0"/></linearGradient></defs>
+                  <path d="M40 8 L112 15 L192 22 L272 20 L352 34 L400 36 L400 44 L0 44 L0 8 Z" fill="url(#areaGrad)"/>
+                  <polyline points="40,8 112,15 192,22 272,20 352,34 400,36" fill="none" stroke="#0f6e56" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="40" cy="8" r="4" fill="white" stroke="#0f6e56" stroke-width="2"/>
+                  <circle cx="112" cy="15" r="4" fill="white" stroke="#0f6e56" stroke-width="2"/>
+                  <circle cx="192" cy="22" r="4" fill="white" stroke="#0f6e56" stroke-width="2"/>
+                  <circle cx="272" cy="20" r="4" fill="white" stroke="#0f6e56" stroke-width="2"/>
+                  <circle cx="352" cy="34" r="4" fill="#0f6e56" stroke="#0f6e56" stroke-width="2"/>
+                  <text font-family="DM Mono,monospace" font-size="8" fill="#085041" x="40" y="4" text-anchor="middle">3.4d</text>
+                  <text font-family="DM Mono,monospace" font-size="8" fill="#085041" x="112" y="11" text-anchor="middle">3.1d</text>
+                  <text font-family="DM Mono,monospace" font-size="8" fill="#085041" x="192" y="18" text-anchor="middle">2.7d</text>
+                  <text font-family="DM Mono,monospace" font-size="8" fill="#085041" x="272" y="16" text-anchor="middle">2.8d</text>
+                  <text font-family="DM Mono,monospace" font-size="8" fill="#085041" x="352" y="30" text-anchor="middle" font-weight="600">2.1d</text>
+                </svg>
+                <div style="font-size:11px;color:var(--ink-muted);margin-top:6px;">First commit to production deploy. Trending down = faster flow.</div>
+              </div>
+
+              <!-- Metric 2: QA Pass Rate -->
+              <div style="padding:18px 20px;border-bottom:1px solid var(--line);">
+                <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:10px;">
+                  <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-muted);">QA Pass Rate</div>
+                  <div style="display:flex;align-items:baseline;gap:8px;">
+                    <span style="font-family:'DM Serif Display',serif;font-size:28px;color:var(--ink);letter-spacing:-0.02em;">97.2%</span>
+                    <span style="font-family:'DM Mono',monospace;font-size:11px;color:#0f6e56;">&#x25B2; 4.1%</span>
+                  </div>
+                </div>
+                <div style="display:flex;align-items:flex-end;gap:8px;height:48px;margin-bottom:6px;">
+                  <div style="flex:1;height:28px;border-radius:4px;background:#e1f5ee;display:flex;align-items:center;justify-content:center;">
+                    <span style="font-family:'DM Mono',monospace;font-size:10px;color:#085041;">93%</span>
+                  </div>
+                  <div style="flex:1;height:34px;border-radius:4px;background:#c8ebda;display:flex;align-items:center;justify-content:center;">
+                    <span style="font-family:'DM Mono',monospace;font-size:10px;color:#085041;">95%</span>
+                  </div>
+                  <div style="flex:1;height:38px;border-radius:4px;background:#b0e0c8;display:flex;align-items:center;justify-content:center;">
+                    <span style="font-family:'DM Mono',monospace;font-size:10px;color:#085041;">96%</span>
+                  </div>
+                  <div style="flex:1;height:38px;border-radius:4px;background:#b0e0c8;display:flex;align-items:center;justify-content:center;">
+                    <span style="font-family:'DM Mono',monospace;font-size:10px;color:#085041;">96%</span>
+                  </div>
+                  <div style="flex:1;height:44px;border-radius:4px;background:#0f6e56;display:flex;align-items:center;justify-content:center;">
+                    <span style="font-family:'DM Mono',monospace;font-size:10px;color:white;font-weight:500;">97%</span>
+                  </div>
+                </div>
+                <div style="font-size:11px;color:var(--ink-muted);margin-top:2px;">% of builds passing automated checks. Above 95% = shipping with confidence.</div>
+              </div>
+
+              <!-- Metric 3: Deploy Stability -->
+              <div style="padding:18px 20px;">
+                <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:10px;">
+                  <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-muted);">Deploy Stability</div>
+                  <div style="display:flex;align-items:baseline;gap:8px;">
+                    <span style="font-family:'DM Serif Display',serif;font-size:28px;color:var(--ink);letter-spacing:-0.02em;">94%</span>
+                    <span style="font-family:'DM Mono',monospace;font-size:11px;color:var(--ink-muted);">18/19 clean</span>
+                  </div>
+                </div>
+                <div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:8px;">
+                  <div style="width:20px;height:20px;border-radius:4px;background:#0f6e56;"></div>
+                  <div style="width:20px;height:20px;border-radius:4px;background:#0f6e56;"></div>
+                  <div style="width:20px;height:20px;border-radius:4px;background:#0f6e56;"></div>
+                  <div style="width:20px;height:20px;border-radius:4px;background:#0f6e56;"></div>
+                  <div style="width:20px;height:20px;border-radius:4px;background:#0f6e56;"></div>
+                  <div style="width:20px;height:20px;border-radius:4px;background:#0f6e56;"></div>
+                  <div style="width:20px;height:20px;border-radius:4px;background:#993c1d;"></div>
+                  <div style="width:20px;height:20px;border-radius:4px;background:#0f6e56;"></div>
+                  <div style="width:20px;height:20px;border-radius:4px;background:#0f6e56;"></div>
+                  <div style="width:20px;height:20px;border-radius:4px;background:#0f6e56;"></div>
+                  <div style="width:20px;height:20px;border-radius:4px;background:#0f6e56;"></div>
+                  <div style="width:20px;height:20px;border-radius:4px;background:#0f6e56;"></div>
+                  <div style="width:20px;height:20px;border-radius:4px;background:#0f6e56;"></div>
+                  <div style="width:20px;height:20px;border-radius:4px;background:#0f6e56;"></div>
+                  <div style="width:20px;height:20px;border-radius:4px;background:#0f6e56;"></div>
+                  <div style="width:20px;height:20px;border-radius:4px;background:#0f6e56;"></div>
+                  <div style="width:20px;height:20px;border-radius:4px;background:#0f6e56;"></div>
+                  <div style="width:20px;height:20px;border-radius:4px;background:#0f6e56;"></div>
+                  <div style="width:20px;height:20px;border-radius:4px;background:#0f6e56;"></div>
+                </div>
+                <div style="display:flex;align-items:center;gap:14px;">
+                  <div style="display:flex;align-items:center;gap:5px;"><div style="width:8px;height:8px;border-radius:2px;background:#0f6e56;"></div><span style="font-size:11px;color:var(--ink-muted);">Survived 48h</span></div>
+                  <div style="display:flex;align-items:center;gap:5px;"><div style="width:8px;height:8px;border-radius:2px;background:#993c1d;"></div><span style="font-size:11px;color:var(--ink-muted);">Rolled back</span></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     SLIDE 7 — THE PATTERN REPEATS (Other Agentic Roles)
+     ═══════════════════════════════════════════════════════ -->
+<section class="slide slide--compact" data-slide="7">
+  <div class="slide-eyebrow reveal" style="color:var(--sage)">
+    Agentic metrics
+  </div>
+  <h2 class="slide-title slide-title--sm reveal reveal-d1" style="margin-bottom:6px;max-width:900px;">
+    The pattern repeats <em>across every role.</em>
+  </h2>
+  <p class="slide-body slide-body--sm reveal reveal-d2" style="margin-bottom:18px;max-width:760px;">
+    Each agentic role follows the same principle: ignore the agent-amplified volume, measure the end-to-end outcome that only the role owner can see.
+  </p>
+
+  <!-- 2x2 grid for 4 remaining agentic roles -->
+  <div class="reveal reveal-d3" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:1100px;">
+
+    <!-- Agentic Architect -->
+    <div style="background:var(--paper-warm);border-radius:10px;padding:16px 18px;border:0.5px solid var(--line-strong);">
+      <div style="display:flex;align-items:center;gap:7px;margin-bottom:8px;">
+        <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="none" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="2.5 1.5" opacity="0.45"/><circle cx="11" cy="11" r="7" fill="none" stroke="#534ab7" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.25"/><circle cx="11" cy="11" r="4.5" fill="#e8f0f8" stroke="#1a3a5c" stroke-width="0.6"/></svg>
+        <div class="card-role-title">Agentic Architect</div>
+        <div style="font-size:11px;color:var(--ink-muted);margin-left:auto;">Arch + Tech Lead + Security</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+        <div>
+          <div class="card-section-label" style="color:var(--ink-muted);">Noise (agent-amplified)</div>
+          <div class="card-desc">ADRs produced, code reviews completed, security scans run, perf profiles</div>
+        </div>
+        <div style="border-left:2px solid #1a3a5c;padding-left:10px;">
+          <div class="card-section-label" style="color:#1a3a5c;">Signal</div>
+          <div style="font-size:12px;color:var(--ink-soft);line-height:1.3;font-weight:500;margin-bottom:3px;">Decision durability</div>
+          <div class="card-desc" style="font-style:italic;">Correlate ADRs in Confluence to downstream rework, security remediations, and perf fixes in Jira. AI can auto-tag the relationships.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Agentic PO/Designer -->
+    <div style="background:var(--paper-warm);border-radius:10px;padding:16px 18px;border:0.5px solid var(--line-strong);">
+      <div style="display:flex;align-items:center;gap:7px;margin-bottom:8px;">
+        <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="none" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="2.5 1.5" opacity="0.45"/><circle cx="11" cy="11" r="7" fill="none" stroke="#534ab7" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.25"/><circle cx="11" cy="11" r="4.5" fill="#fdf3e3" stroke="#854f0b" stroke-width="0.6"/></svg>
+        <div class="card-role-title">Agentic PO/Designer</div>
+        <div style="font-size:11px;color:var(--ink-muted);margin-left:auto;">PO + UX + BA</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+        <div>
+          <div class="card-section-label" style="color:var(--ink-muted);">Noise (agent-amplified)</div>
+          <div class="card-desc">Research reports generated, design concepts, specs written, competitive analyses</div>
+        </div>
+        <div style="border-left:2px solid #854f0b;padding-left:10px;">
+          <div class="card-section-label" style="color:#854f0b;">Signal</div>
+          <div style="font-size:12px;color:var(--ink-soft);line-height:1.3;font-weight:500;margin-bottom:3px;">Spec-to-build fidelity</div>
+          <div class="card-desc" style="font-style:italic;">Count clarification requests, design revisions, and scope changes post-handoff via Jira comment threads and Figma version history.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Agentic QA -->
+    <div style="background:var(--paper-warm);border-radius:10px;padding:16px 18px;border:0.5px solid var(--line-strong);">
+      <div style="display:flex;align-items:center;gap:7px;margin-bottom:8px;">
+        <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="none" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="2.5 1.5" opacity="0.45"/><circle cx="11" cy="11" r="7" fill="none" stroke="#534ab7" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.25"/><circle cx="11" cy="11" r="4.5" fill="#faece7" stroke="#993c1d" stroke-width="0.6"/></svg>
+        <div class="card-role-title">Agentic QA</div>
+        <div style="font-size:11px;color:var(--ink-muted);margin-left:auto;">Dedicated quality (larger teams)</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+        <div>
+          <div class="card-section-label" style="color:var(--ink-muted);">Noise (agent-amplified)</div>
+          <div class="card-desc">AI-generated test cases, visual regressions executed, perf benchmarks run</div>
+        </div>
+        <div style="border-left:2px solid #993c1d;padding-left:10px;">
+          <div class="card-section-label" style="color:#993c1d;">Signal</div>
+          <div style="font-size:12px;color:var(--ink-soft);line-height:1.3;font-weight:500;margin-bottom:3px;">Escaped defect cost</div>
+          <div class="card-desc" style="font-style:italic;">Production incidents (PagerDuty) weighted by severity and business impact. Sum of (severity x impact weight) per release, trending down.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Agentic Delivery Engineer -->
+    <div style="background:var(--paper-warm);border-radius:10px;padding:16px 18px;border:0.5px solid var(--line-strong);">
+      <div style="display:flex;align-items:center;gap:7px;margin-bottom:8px;">
+        <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="none" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="2.5 1.5" opacity="0.45"/><circle cx="11" cy="11" r="7" fill="none" stroke="#534ab7" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.25"/><circle cx="11" cy="11" r="4.5" fill="#eeedfe" stroke="#534ab7" stroke-width="0.6"/></svg>
+        <div class="card-role-title">Agentic Delivery Engineer</div>
+        <div style="font-size:11px;color:var(--ink-muted);margin-left:auto;">Sprint coord + stakeholders + release</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+        <div>
+          <div class="card-section-label" style="color:var(--ink-muted);">Noise (agent-amplified)</div>
+          <div class="card-desc">Status reports auto-generated, stakeholder updates sent, blockers logged</div>
+        </div>
+        <div style="border-left:2px solid #534ab7;padding-left:10px;">
+          <div class="card-section-label" style="color:#534ab7;">Signal</div>
+          <div style="font-size:12px;color:var(--ink-soft);line-height:1.3;font-weight:500;margin-bottom:3px;">Delivery predictability index</div>
+          <div class="card-desc" style="font-style:italic;">Standard deviation of sprint completion rates over a rolling 6-sprint window. Low variance = calibrated commitments + effective blocker removal.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom callout -->
+  <div class="callout reveal reveal-d4" style="margin-top:16px;max-width:900px;border-left-color:#534ab7;">
+    <div class="callout-label">The insight</div>
+    <div class="callout-text callout-text--sm">
+      Each follows the same pattern as the Agentic Engineer: one person owns both sides of the correlation — making the previously unmeasurable <em>measurable for the first time</em>.
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     SLIDE 8 — TEAM CONFIGURATIONS & SCALING
+     ═══════════════════════════════════════════════════════ -->
+<section class="slide slide--compact" data-slide="8">
+  <div class="slide-split" style="gap:36px;align-items:start;">
+    <div class="slide-split-left" style="flex:1.1;">
+      <div class="slide-eyebrow reveal" style="color:var(--sage)">
+        Flexible by design
+      </div>
+      <h2 class="slide-title slide-title--sm reveal reveal-d1" style="margin-bottom:6px;">
+        Right-size the team. <em>Scale when you need to.</em>
+      </h2>
+      <p class="slide-body slide-body--sm reveal reveal-d2" style="margin-bottom:20px;max-width:720px;">
+        Every person brings their agent fleet. Teams scale from two to ten without losing velocity — just add pods.
+      </p>
+
+      <!-- ── Team Configurations ── -->
+      <div class="reveal reveal-d3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:20px;">
+
+        <!-- Strike Force (2 people) -->
+        <div style="background:var(--paper-warm);border:0.5px solid var(--line-strong);border-radius:12px;padding:20px 18px;display:flex;flex-direction:column;">
+          <div style="font-family:'DM Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--sage);margin-bottom:2px;">Focused</div>
+          <div style="font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);line-height:1.1;margin-bottom:4px;">2 people</div>
+          <div style="font-size:13px;color:var(--ink-muted);margin-bottom:12px;">Rapid fixes, spikes, targeted delivery</div>
+          <div style="display:flex;gap:16px;margin-bottom:14px;padding:8px 0;">
+            <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.75"/></svg>
+            <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.75"/></svg>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:5px;">
+            <div style="display:flex;align-items:center;gap:7px;"><div style="width:7px;height:7px;border-radius:50%;background:#0f6e56;flex-shrink:0;"></div><span style="font-size:14px;color:var(--ink-soft);">Agentic Engineer</span></div>
+            <div style="display:flex;align-items:center;gap:7px;"><div style="width:7px;height:7px;border-radius:50%;background:#0f6e56;flex-shrink:0;"></div><span style="font-size:14px;color:var(--ink-soft);">Agentic Engineer</span></div>
+          </div>
+        </div>
+
+        <!-- Pathfinder (3 people) -->
+        <div style="background:var(--paper-warm);border:0.5px solid var(--line-strong);border-radius:12px;padding:20px 18px;display:flex;flex-direction:column;">
+          <div style="font-family:'DM Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--rail);margin-bottom:2px;">Balanced</div>
+          <div style="font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);line-height:1.1;margin-bottom:4px;">3 people</div>
+          <div style="font-size:13px;color:var(--ink-muted);margin-bottom:12px;">New features, integrations, product discovery</div>
+          <div style="display:flex;gap:16px;margin-bottom:14px;padding:8px 0;">
+            <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#e8f0f8" stroke="#1a3a5c" stroke-width="0.75"/></svg>
+            <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.75"/></svg>
+            <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#fdf3e3" stroke="#854f0b" stroke-width="0.75"/></svg>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:5px;">
+            <div style="display:flex;align-items:center;gap:7px;"><div style="width:7px;height:7px;border-radius:50%;background:#1a3a5c;flex-shrink:0;"></div><span style="font-size:14px;color:var(--ink-soft);">Agentic Architect</span></div>
+            <div style="display:flex;align-items:center;gap:7px;"><div style="width:7px;height:7px;border-radius:50%;background:#0f6e56;flex-shrink:0;"></div><span style="font-size:14px;color:var(--ink-soft);">Agentic Engineer</span></div>
+            <div style="display:flex;align-items:center;gap:7px;"><div style="width:7px;height:7px;border-radius:50%;background:#854f0b;flex-shrink:0;"></div><span style="font-size:14px;color:var(--ink-soft);">Agentic PO/Designer</span></div>
+          </div>
+        </div>
+
+        <!-- Full Spectrum (5 people) -->
+        <div style="background:var(--paper-warm);border:0.5px solid var(--line-strong);border-radius:12px;padding:20px 18px;display:flex;flex-direction:column;">
+          <div style="font-family:'DM Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ember);margin-bottom:2px;">Comprehensive</div>
+          <div style="font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);line-height:1.1;margin-bottom:4px;">5 people</div>
+          <div style="font-size:13px;color:var(--ink-muted);margin-bottom:12px;">Complex builds, new products, end-to-end</div>
+          <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:14px;padding:8px 0;">
+            <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#e8f0f8" stroke="#1a3a5c" stroke-width="0.75"/></svg>
+            <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.75"/></svg>
+            <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#faece7" stroke="#993c1d" stroke-width="0.75"/></svg>
+            <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#fdf3e3" stroke="#854f0b" stroke-width="0.75"/></svg>
+            <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#eeedfe" stroke="#534ab7" stroke-width="0.75"/></svg>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:5px;">
+            <div style="display:flex;align-items:center;gap:7px;"><div style="width:7px;height:7px;border-radius:50%;background:#1a3a5c;flex-shrink:0;"></div><span style="font-size:14px;color:var(--ink-soft);">Agentic Architect</span></div>
+            <div style="display:flex;align-items:center;gap:7px;"><div style="width:7px;height:7px;border-radius:50%;background:#0f6e56;flex-shrink:0;"></div><span style="font-size:14px;color:var(--ink-soft);">Agentic Engineer</span></div>
+            <div style="display:flex;align-items:center;gap:7px;"><div style="width:7px;height:7px;border-radius:50%;background:#993c1d;flex-shrink:0;"></div><span style="font-size:14px;color:var(--ink-soft);">Agentic QA</span></div>
+            <div style="display:flex;align-items:center;gap:7px;"><div style="width:7px;height:7px;border-radius:50%;background:#854f0b;flex-shrink:0;"></div><span style="font-size:14px;color:var(--ink-soft);">Agentic PO/Designer</span></div>
+            <div style="display:flex;align-items:center;gap:7px;"><div style="width:7px;height:7px;border-radius:50%;background:#534ab7;flex-shrink:0;"></div><span style="font-size:14px;color:var(--ink-soft);">Agentic Delivery Engineer</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ── Transition note ── -->
+      <p class="reveal reveal-d3" style="font-size:13px;color:var(--ink-muted);margin-bottom:8px;font-style:italic;">These configurations are building blocks — combine them for larger programs.</p>
+
+      <!-- ── Divider ── -->
+      <div class="reveal reveal-d3" style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+        <div style="flex:1;height:0.5px;background:var(--line-strong);"></div>
+        <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.1em;color:var(--ink-muted);text-transform:uppercase;">Scales to</div>
+        <div style="flex:1;height:0.5px;background:var(--line-strong);"></div>
+      </div>
+
+      <!-- ── Program Scale (10 people) ── -->
+      <div class="reveal reveal-d4">
+
+        <!-- Engagement Leadership -->
+        <div style="background:#e8f0f8;border:0.75px solid #1a3a5c;border-radius:8px;padding:10px 20px;display:flex;align-items:center;justify-content:center;gap:36px;margin-bottom:3px;">
+          <div style="display:flex;align-items:center;gap:8px;">
+            <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="12" cy="12" r="8" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="12" cy="12" r="5" fill="white" stroke="#1a3a5c" stroke-width="0.75"/></svg>
+            <div>
+              <div style="font-family:'DM Serif Display',serif;font-size:15px;color:#1a3a5c;line-height:1.2;">Agentic Architect</div>
+              <div style="font-size:11px;color:var(--ink-muted);">Technical coherence across all pods</div>
+            </div>
+          </div>
+          <div style="width:1px;height:24px;background:#1a3a5c;opacity:0.2;"></div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="12" cy="12" r="8" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="12" cy="12" r="5" fill="white" stroke="#534ab7" stroke-width="0.75"/></svg>
+            <div>
+              <div style="font-family:'DM Serif Display',serif;font-size:15px;color:#534ab7;line-height:1.2;">Agentic Delivery Engineer</div>
+              <div style="font-size:11px;color:var(--ink-muted);">Program coordination, stakeholders, risk</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Connector lines -->
+        <div style="display:flex;justify-content:space-around;padding:0 80px;">
+          <div style="width:1px;height:12px;background:var(--line-strong);"></div>
+          <div style="width:1px;height:12px;background:var(--line-strong);"></div>
+          <div style="width:1px;height:12px;background:var(--line-strong);"></div>
+        </div>
+
+        <!-- Three pods -->
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
+          <div style="background:var(--paper-warm);border:0.5px solid var(--line-strong);border-radius:8px;padding:14px 14px;">
+            <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--sage);margin-bottom:6px;">Core Platform &nbsp;&#x2022;&nbsp; 3 people</div>
+            <div style="display:flex;gap:10px;margin-bottom:8px;">
+              <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="none" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="2.5 1.5" opacity="0.45"/><circle cx="11" cy="11" r="7" fill="none" stroke="#534ab7" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.25"/><circle cx="11" cy="11" r="4.5" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.6"/></svg>
+              <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="none" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="2.5 1.5" opacity="0.45"/><circle cx="11" cy="11" r="7" fill="none" stroke="#534ab7" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.25"/><circle cx="11" cy="11" r="4.5" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.6"/></svg>
+              <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="none" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="2.5 1.5" opacity="0.45"/><circle cx="11" cy="11" r="7" fill="none" stroke="#534ab7" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.25"/><circle cx="11" cy="11" r="4.5" fill="#faece7" stroke="#993c1d" stroke-width="0.6"/></svg>
+            </div>
+            <div style="font-size:12px;color:var(--ink-muted);line-height:1.4;">Agentic Engineer x2 + Agentic QA</div>
+          </div>
+          <div style="background:var(--paper-warm);border:0.5px solid var(--line-strong);border-radius:8px;padding:14px 14px;">
+            <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;">Feature Delivery &nbsp;&#x2022;&nbsp; 3 people</div>
+            <div style="display:flex;gap:10px;margin-bottom:8px;">
+              <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="none" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="2.5 1.5" opacity="0.45"/><circle cx="11" cy="11" r="7" fill="none" stroke="#534ab7" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.25"/><circle cx="11" cy="11" r="4.5" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.6"/></svg>
+              <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="none" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="2.5 1.5" opacity="0.45"/><circle cx="11" cy="11" r="7" fill="none" stroke="#534ab7" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.25"/><circle cx="11" cy="11" r="4.5" fill="#fdf3e3" stroke="#854f0b" stroke-width="0.6"/></svg>
+              <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="none" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="2.5 1.5" opacity="0.45"/><circle cx="11" cy="11" r="7" fill="none" stroke="#534ab7" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.25"/><circle cx="11" cy="11" r="4.5" fill="#faece7" stroke="#993c1d" stroke-width="0.6"/></svg>
+            </div>
+            <div style="font-size:12px;color:var(--ink-muted);line-height:1.4;">Agentic Engineer + Agentic PO/Designer + Agentic QA</div>
+          </div>
+          <div style="background:var(--paper-warm);border:0.5px solid var(--line-strong);border-radius:8px;padding:14px 14px;">
+            <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--rail);margin-bottom:6px;">Integration &nbsp;&#x2022;&nbsp; 2 people</div>
+            <div style="display:flex;gap:10px;margin-bottom:8px;">
+              <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="none" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="2.5 1.5" opacity="0.45"/><circle cx="11" cy="11" r="7" fill="none" stroke="#534ab7" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.25"/><circle cx="11" cy="11" r="4.5" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.6"/></svg>
+              <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="none" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="2.5 1.5" opacity="0.45"/><circle cx="11" cy="11" r="7" fill="none" stroke="#534ab7" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.25"/><circle cx="11" cy="11" r="4.5" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.6"/></svg>
+            </div>
+            <div style="font-size:12px;color:var(--ink-muted);line-height:1.4;">Agentic Engineer x2</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal reveal-d4" style="margin-top:16px;font-family:'DM Mono',monospace;font-size:11px;color:var(--ink-muted);letter-spacing:0.04em;text-align:center;">
+        2 TO 10 PEOPLE &nbsp;&#x2022;&nbsp; SAME BUILDING BLOCKS &nbsp;&#x2022;&nbsp; UNLIMITED AGENT WORKFLOWS
+      </div>
+    </div>
+
+    <!-- Right: Velocity Comparison Chart (HTML) -->
+    <div class="slide-split-right reveal reveal-d2" style="align-items:stretch;align-self:stretch;">
+      <div style="border-left:2px solid var(--line-strong);padding-left:28px;display:flex;flex-direction:column;gap:0;">
+
+        <!-- Chart title -->
+        <div style="font-family:'DM Serif Display',serif;font-size:22px;color:var(--ink);margin-bottom:20px;">Delivery Velocity Comparison</div>
+
+        <!-- ── Traditional Team ── -->
+        <div style="font-family:'DM Mono',monospace;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:10px;">10-person traditional scrum team</div>
+
+        <!-- 10 plain circles -->
+        <div style="display:flex;gap:6px;margin-bottom:12px;">
+          <div style="width:20px;height:20px;border-radius:50%;background:#faece7;border:0.75px solid #993c1d;"></div>
+          <div style="width:20px;height:20px;border-radius:50%;background:#faece7;border:0.75px solid #993c1d;"></div>
+          <div style="width:20px;height:20px;border-radius:50%;background:#faece7;border:0.75px solid #993c1d;"></div>
+          <div style="width:20px;height:20px;border-radius:50%;background:#faece7;border:0.75px solid #993c1d;"></div>
+          <div style="width:20px;height:20px;border-radius:50%;background:#faece7;border:0.75px solid #993c1d;"></div>
+          <div style="width:20px;height:20px;border-radius:50%;background:#faece7;border:0.75px solid #993c1d;"></div>
+          <div style="width:20px;height:20px;border-radius:50%;background:#faece7;border:0.75px solid #993c1d;"></div>
+          <div style="width:20px;height:20px;border-radius:50%;background:#faece7;border:0.75px solid #993c1d;"></div>
+          <div style="width:20px;height:20px;border-radius:50%;background:#faece7;border:0.75px solid #993c1d;"></div>
+          <div style="width:20px;height:20px;border-radius:50%;background:#faece7;border:0.75px solid #993c1d;"></div>
+        </div>
+
+        <!-- Impact bar — traditional (short) -->
+        <div style="display:flex;align-items:center;margin-bottom:6px;">
+          <div style="background:#faece7;border:0.75px solid #993c1d;border-radius:5px;height:28px;width:10%;display:flex;align-items:center;justify-content:center;overflow:visible;white-space:nowrap;padding:0 10px;">
+            <span style="font-family:'DM Mono',monospace;font-size:12px;color:#712b13;">Impact</span>
+          </div>
+        </div>
+        <div style="font-size:14px;color:var(--ink-muted);margin-bottom:8px;">Traditional team velocity</div>
+
+        <!-- Cost bar -->
+        <div style="background:#faece7;border:0.5px solid #993c1d;border-radius:5px;padding:5px 14px;opacity:0.6;margin-bottom:4px;text-align:center;">
+          <span style="font-family:'DM Mono',monospace;font-size:13px;color:#712b13;">~$294,000 burn / mo</span>
+        </div>
+        <div style="font-size:13px;color:var(--ink-muted);margin-bottom:16px;">at $175/hr effective rate</div>
+
+        <!-- Divider -->
+        <div style="height:0.5px;background:var(--line-strong);margin-bottom:16px;"></div>
+
+        <!-- ── Agentic Team ── -->
+        <div style="font-family:'DM Mono',monospace;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:10px;">5-person agentic team</div>
+
+        <!-- 5 agentic engineer circles + legend -->
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+          <div style="display:flex;gap:8px;">
+            <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.75"/></svg>
+            <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.75"/></svg>
+            <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.75"/></svg>
+            <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.75"/></svg>
+            <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.75"/></svg>
+          </div>
+          <span style="font-size:13px;color:var(--ink-muted);">= AI-enabled engineer</span>
+        </div>
+
+        <!-- Impact bar — agentic (full width) -->
+        <div style="display:flex;align-items:center;margin-bottom:6px;">
+          <div style="background:#e1f5ee;border:0.75px solid #0f6e56;border-radius:5px;height:28px;width:100%;display:flex;align-items:center;padding:0 12px;">
+            <span style="font-family:'DM Mono',monospace;font-size:12px;color:#085041;">Impact</span>
+          </div>
+        </div>
+        <div style="font-size:14px;color:var(--ink-muted);margin-bottom:8px;">Agent-enabled team velocity</div>
+
+        <!-- Cost bar -->
+        <div style="background:#e1f5ee;border:0.5px solid #0f6e56;border-radius:5px;padding:5px 14px;opacity:0.6;margin-bottom:4px;max-width:55%;text-align:center;">
+          <span style="font-family:'DM Mono',monospace;font-size:13px;color:#085041;">~$147,000 burn / mo</span>
+        </div>
+        <div style="font-size:13px;color:var(--ink-muted);margin-bottom:0;">at $175/hr effective rate &nbsp;*Plus agent compute costs</div>
+
+      </div>
+    </div>
   </div>
 </section>
 
 
 
 <!-- ═══════════════════════════════════════════════════════
-     SLIDE 7 — CTA / CLOSING
+     SLIDE 10 — CTA / CLOSING
      ═══════════════════════════════════════════════════════ -->
-<section class="slide slide-cta" data-slide="7" style="overflow:hidden;">
+<section class="slide slide-cta" data-slide="9" style="overflow:hidden;">
   <canvas id="meshCta" width="1600" height="900" style="position:absolute;inset:0;width:100%;height:100%;opacity:0.35;pointer-events:none;"></canvas>
   <div class="slide-eyebrow reveal" style="position:relative;">The future of teams</div>
   <h2 class="cta-title reveal reveal-d1" style="position:relative;">Smaller teams.<br>Bigger output.<br><em>Higher quality.</em></h2>
@@ -1351,9 +1833,9 @@
       <div class="cta-card-body">Fewer humans means fewer handoffs, less coordination, and faster decisions. Every person is a full-stack contributor.</div>
     </div>
     <div class="cta-card">
-      <div class="cta-card-num">10x</div>
-      <div class="cta-card-label">Output, not just speed</div>
-      <div class="cta-card-body">It's not about doing the same work faster. It's about tackling work that was previously too complex for any team size.</div>
+      <div class="cta-card-num" style="font-size:32px;">Impact</div>
+      <div class="cta-card-label">Over activity</div>
+      <div class="cta-card-body">Measure what matters — cycle time, quality, and stability — not story points, PRs merged, or tasks dispatched.</div>
     </div>
     <div class="cta-card">
       <div class="cta-card-num">&#x221E;</div>
@@ -1615,6 +2097,22 @@
   // Trigger reveal for hero slide immediately
   slides[0].querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
 })();
+
+// Toggle between metric definitions and dashboard views on slide 6
+function toggleMetricView() {
+  const defs = document.getElementById('metricViewDefinitions');
+  const dash = document.getElementById('metricViewDashboard');
+  const btn = document.getElementById('metricViewToggle');
+  if (defs.style.display !== 'none') {
+    defs.style.display = 'none';
+    dash.style.display = 'flex';
+    btn.innerHTML = '&#x2190; Show definitions';
+  } else {
+    defs.style.display = 'flex';
+    dash.style.display = 'none';
+    btn.innerHTML = 'Show dashboard &#x2192;';
+  }
+}
 </script>
 
 </body>
