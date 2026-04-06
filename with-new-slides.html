@@ -544,7 +544,7 @@
 <div class="progress-bar" id="progressBar"></div>
 
 <!-- SLIDE COUNTER -->
-<div class="slide-counter" id="slideCounter">1 / 10</div>
+<div class="slide-counter" id="slideCounter">1 / 9</div>
 
 <!-- NAV DOTS -->
 <div class="nav-dots" id="navDots"></div>
@@ -1597,46 +1597,159 @@
 
 
 <!-- ═══════════════════════════════════════════════════════
-     SLIDE 8 — HUMAN POWER (The Metric)
+     SLIDE 8 — TEAM CONFIGURATIONS & SCALING
      ═══════════════════════════════════════════════════════ -->
-<section class="slide" data-slide="8" style="padding:80px 72px;">
-  <div class="slide-split">
-    <div class="slide-split-left">
-      <div class="slide-eyebrow reveal" style="color:var(--ember)">
-        Measuring the multiplier
+<section class="slide" data-slide="8" style="padding:40px 48px;">
+  <div class="slide-split" style="gap:36px;align-items:start;">
+    <div class="slide-split-left" style="flex:1.1;">
+      <div class="slide-eyebrow reveal" style="color:var(--sage)">
+        Flexible by design
       </div>
-      <h2 class="slide-title reveal reveal-d1">
-        Introducing<br><em>Human Power.</em>
+      <h2 class="slide-title reveal reveal-d1" style="font-size:30px;margin-bottom:6px;">
+        Right-size the team. <em>Scale when you need to.</em>
       </h2>
-      <p class="slide-body reveal reveal-d2" style="margin-bottom:24px;">
-        When the engine replaced the horse, we invented horsepower to explain the benefit in terms everyone understood. AI is replacing manual delivery. We need the same kind of mental model.
+      <p class="slide-body reveal reveal-d2" style="font-size:14px;margin-bottom:20px;max-width:720px;">
+        Every person brings their agent fleet. Teams scale from two to ten without losing velocity — just add pods.
       </p>
-      <div class="callout reveal reveal-d3">
-        <div class="callout-label">The unit</div>
-        <div class="callout-text">
-          <strong>1 HP = the sustained output of one skilled engineer, working without AI.</strong><br>
-          A baseline everyone in delivery understands intuitively.
+
+      <!-- ── Team Configurations ── -->
+      <div class="reveal reveal-d3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:20px;">
+
+        <!-- Strike Force (2 people) -->
+        <div style="background:var(--paper-warm);border:0.5px solid var(--line-strong);border-radius:12px;padding:20px 18px;display:flex;flex-direction:column;">
+          <div style="font-family:'DM Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--sage);margin-bottom:2px;">Focused</div>
+          <div style="font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);line-height:1.1;margin-bottom:4px;">2 people</div>
+          <div style="font-size:13px;color:var(--ink-muted);margin-bottom:12px;">Rapid fixes, spikes, targeted delivery</div>
+          <div style="display:flex;gap:16px;margin-bottom:14px;padding:8px 0;">
+            <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.75"/></svg>
+            <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.75"/></svg>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:5px;">
+            <div style="display:flex;align-items:center;gap:7px;"><div style="width:7px;height:7px;border-radius:50%;background:#0f6e56;flex-shrink:0;"></div><span style="font-size:14px;color:var(--ink-soft);">Agentic Engineer</span></div>
+            <div style="display:flex;align-items:center;gap:7px;"><div style="width:7px;height:7px;border-radius:50%;background:#0f6e56;flex-shrink:0;"></div><span style="font-size:14px;color:var(--ink-soft);">Agentic Engineer</span></div>
+          </div>
+        </div>
+
+        <!-- Pathfinder (3 people) -->
+        <div style="background:var(--paper-warm);border:0.5px solid var(--line-strong);border-radius:12px;padding:20px 18px;display:flex;flex-direction:column;">
+          <div style="font-family:'DM Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--rail);margin-bottom:2px;">Balanced</div>
+          <div style="font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);line-height:1.1;margin-bottom:4px;">3 people</div>
+          <div style="font-size:13px;color:var(--ink-muted);margin-bottom:12px;">New features, integrations, product discovery</div>
+          <div style="display:flex;gap:16px;margin-bottom:14px;padding:8px 0;">
+            <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#e8f0f8" stroke="#1a3a5c" stroke-width="0.75"/></svg>
+            <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.75"/></svg>
+            <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#fdf3e3" stroke="#854f0b" stroke-width="0.75"/></svg>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:5px;">
+            <div style="display:flex;align-items:center;gap:7px;"><div style="width:7px;height:7px;border-radius:50%;background:#1a3a5c;flex-shrink:0;"></div><span style="font-size:14px;color:var(--ink-soft);">Agentic Architect</span></div>
+            <div style="display:flex;align-items:center;gap:7px;"><div style="width:7px;height:7px;border-radius:50%;background:#0f6e56;flex-shrink:0;"></div><span style="font-size:14px;color:var(--ink-soft);">Agentic Engineer</span></div>
+            <div style="display:flex;align-items:center;gap:7px;"><div style="width:7px;height:7px;border-radius:50%;background:#854f0b;flex-shrink:0;"></div><span style="font-size:14px;color:var(--ink-soft);">Agentic PO/Designer</span></div>
+          </div>
+        </div>
+
+        <!-- Full Spectrum (5 people) -->
+        <div style="background:var(--paper-warm);border:0.5px solid var(--line-strong);border-radius:12px;padding:20px 18px;display:flex;flex-direction:column;">
+          <div style="font-family:'DM Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ember);margin-bottom:2px;">Comprehensive</div>
+          <div style="font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);line-height:1.1;margin-bottom:4px;">5 people</div>
+          <div style="font-size:13px;color:var(--ink-muted);margin-bottom:12px;">Complex builds, new products, end-to-end</div>
+          <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:14px;padding:8px 0;">
+            <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#e8f0f8" stroke="#1a3a5c" stroke-width="0.75"/></svg>
+            <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.75"/></svg>
+            <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#faece7" stroke="#993c1d" stroke-width="0.75"/></svg>
+            <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#fdf3e3" stroke="#854f0b" stroke-width="0.75"/></svg>
+            <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#eeedfe" stroke="#534ab7" stroke-width="0.75"/></svg>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:5px;">
+            <div style="display:flex;align-items:center;gap:7px;"><div style="width:7px;height:7px;border-radius:50%;background:#1a3a5c;flex-shrink:0;"></div><span style="font-size:14px;color:var(--ink-soft);">Agentic Architect</span></div>
+            <div style="display:flex;align-items:center;gap:7px;"><div style="width:7px;height:7px;border-radius:50%;background:#0f6e56;flex-shrink:0;"></div><span style="font-size:14px;color:var(--ink-soft);">Agentic Engineer</span></div>
+            <div style="display:flex;align-items:center;gap:7px;"><div style="width:7px;height:7px;border-radius:50%;background:#993c1d;flex-shrink:0;"></div><span style="font-size:14px;color:var(--ink-soft);">Agentic QA</span></div>
+            <div style="display:flex;align-items:center;gap:7px;"><div style="width:7px;height:7px;border-radius:50%;background:#854f0b;flex-shrink:0;"></div><span style="font-size:14px;color:var(--ink-soft);">Agentic PO/Designer</span></div>
+            <div style="display:flex;align-items:center;gap:7px;"><div style="width:7px;height:7px;border-radius:50%;background:#534ab7;flex-shrink:0;"></div><span style="font-size:14px;color:var(--ink-soft);">Agentic Delivery Engineer</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ── Transition note ── -->
+      <p class="reveal reveal-d3" style="font-size:13px;color:var(--ink-muted);margin-bottom:8px;font-style:italic;">These configurations are building blocks — combine them for larger programs.</p>
+
+      <!-- ── Divider ── -->
+      <div class="reveal reveal-d3" style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+        <div style="flex:1;height:0.5px;background:var(--line-strong);"></div>
+        <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.1em;color:var(--ink-muted);text-transform:uppercase;">Scales to</div>
+        <div style="flex:1;height:0.5px;background:var(--line-strong);"></div>
+      </div>
+
+      <!-- ── Program Scale (10 people) ── -->
+      <div class="reveal reveal-d4">
+
+        <!-- Engagement Leadership -->
+        <div style="background:#e8f0f8;border:0.75px solid #1a3a5c;border-radius:8px;padding:10px 20px;display:flex;align-items:center;justify-content:center;gap:36px;margin-bottom:3px;">
+          <div style="display:flex;align-items:center;gap:8px;">
+            <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="12" cy="12" r="8" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="12" cy="12" r="5" fill="white" stroke="#1a3a5c" stroke-width="0.75"/></svg>
+            <div>
+              <div style="font-family:'DM Serif Display',serif;font-size:15px;color:#1a3a5c;line-height:1.2;">Agentic Architect</div>
+              <div style="font-size:11px;color:var(--ink-muted);">Technical coherence across all pods</div>
+            </div>
+          </div>
+          <div style="width:1px;height:24px;background:#1a3a5c;opacity:0.2;"></div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="12" cy="12" r="8" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="12" cy="12" r="5" fill="white" stroke="#534ab7" stroke-width="0.75"/></svg>
+            <div>
+              <div style="font-family:'DM Serif Display',serif;font-size:15px;color:#534ab7;line-height:1.2;">Agentic Delivery Engineer</div>
+              <div style="font-size:11px;color:var(--ink-muted);">Program coordination, stakeholders, risk</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Connector lines -->
+        <div style="display:flex;justify-content:space-around;padding:0 80px;">
+          <div style="width:1px;height:12px;background:var(--line-strong);"></div>
+          <div style="width:1px;height:12px;background:var(--line-strong);"></div>
+          <div style="width:1px;height:12px;background:var(--line-strong);"></div>
+        </div>
+
+        <!-- Three pods -->
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
+          <div style="background:var(--paper-warm);border:0.5px solid var(--line-strong);border-radius:8px;padding:14px 14px;">
+            <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--sage);margin-bottom:6px;">Core Platform &nbsp;&#x2022;&nbsp; 3 people</div>
+            <div style="display:flex;gap:10px;margin-bottom:8px;">
+              <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="none" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="2.5 1.5" opacity="0.45"/><circle cx="11" cy="11" r="7" fill="none" stroke="#534ab7" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.25"/><circle cx="11" cy="11" r="4.5" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.6"/></svg>
+              <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="none" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="2.5 1.5" opacity="0.45"/><circle cx="11" cy="11" r="7" fill="none" stroke="#534ab7" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.25"/><circle cx="11" cy="11" r="4.5" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.6"/></svg>
+              <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="none" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="2.5 1.5" opacity="0.45"/><circle cx="11" cy="11" r="7" fill="none" stroke="#534ab7" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.25"/><circle cx="11" cy="11" r="4.5" fill="#faece7" stroke="#993c1d" stroke-width="0.6"/></svg>
+            </div>
+            <div style="font-size:12px;color:var(--ink-muted);line-height:1.4;">Agentic Engineer x2 + Agentic QA</div>
+          </div>
+          <div style="background:var(--paper-warm);border:0.5px solid var(--line-strong);border-radius:8px;padding:14px 14px;">
+            <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;">Feature Delivery &nbsp;&#x2022;&nbsp; 3 people</div>
+            <div style="display:flex;gap:10px;margin-bottom:8px;">
+              <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="none" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="2.5 1.5" opacity="0.45"/><circle cx="11" cy="11" r="7" fill="none" stroke="#534ab7" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.25"/><circle cx="11" cy="11" r="4.5" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.6"/></svg>
+              <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="none" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="2.5 1.5" opacity="0.45"/><circle cx="11" cy="11" r="7" fill="none" stroke="#534ab7" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.25"/><circle cx="11" cy="11" r="4.5" fill="#fdf3e3" stroke="#854f0b" stroke-width="0.6"/></svg>
+              <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="none" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="2.5 1.5" opacity="0.45"/><circle cx="11" cy="11" r="7" fill="none" stroke="#534ab7" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.25"/><circle cx="11" cy="11" r="4.5" fill="#faece7" stroke="#993c1d" stroke-width="0.6"/></svg>
+            </div>
+            <div style="font-size:12px;color:var(--ink-muted);line-height:1.4;">Agentic Engineer + Agentic PO/Designer + Agentic QA</div>
+          </div>
+          <div style="background:var(--paper-warm);border:0.5px solid var(--line-strong);border-radius:8px;padding:14px 14px;">
+            <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--rail);margin-bottom:6px;">Integration &nbsp;&#x2022;&nbsp; 2 people</div>
+            <div style="display:flex;gap:10px;margin-bottom:8px;">
+              <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="none" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="2.5 1.5" opacity="0.45"/><circle cx="11" cy="11" r="7" fill="none" stroke="#534ab7" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.25"/><circle cx="11" cy="11" r="4.5" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.6"/></svg>
+              <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="none" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="2.5 1.5" opacity="0.45"/><circle cx="11" cy="11" r="7" fill="none" stroke="#534ab7" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.25"/><circle cx="11" cy="11" r="4.5" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.6"/></svg>
+            </div>
+            <div style="font-size:12px;color:var(--ink-muted);line-height:1.4;">Agentic Engineer x2</div>
+          </div>
         </div>
       </div>
-      <p class="slide-body reveal reveal-d4" style="margin-top:24px;font-size:15px;">
-        A peer-reviewed MIT/Microsoft study found developers using AI completed the same task in <strong>1 hour 11 minutes vs. 2 hours 41 minutes</strong> — 55% faster, apples to apples. Compound that across code volume, PR throughput, and onboarding time — AI now authors <strong>~27% of production code</strong>.
-      </p>
-      <p class="slide-body reveal reveal-d5" style="margin-top:12px;font-size:15px;">
-        Organizations building AI-native delivery workflows are compressing what used to take a sprint into a day. That's the <strong>10 HP trajectory</strong> we're positioning teams for — and the ceiling is still rising.
-      </p>
-      <p class="slide-body reveal reveal-d5" style="margin-top:10px;font-size:11px;color:var(--ink-muted);">
-        Source: Peng et al., "The Impact of AI on Developer Productivity" (arXiv:2302.06590) &middot; GitHub Research, 2023
-      </p>
+
+      <div class="reveal reveal-d4" style="margin-top:16px;font-family:'DM Mono',monospace;font-size:11px;color:var(--ink-muted);letter-spacing:0.04em;text-align:center;">
+        2 TO 10 PEOPLE &nbsp;&#x2022;&nbsp; SAME BUILDING BLOCKS &nbsp;&#x2022;&nbsp; UNLIMITED AGENT WORKFLOWS
+      </div>
     </div>
+
+    <!-- Right: Velocity Comparison Chart -->
     <div class="slide-split-right reveal reveal-d2">
       <svg viewBox="0 0 480 435" width="100%" style="display:block;overflow:visible;">
-        <!-- Title -->
         <text font-family="DM Serif Display,serif" font-size="20" fill="var(--ink)" x="240" y="24" text-anchor="middle" dominant-baseline="central">Delivery Velocity Comparison</text>
-
-        <!-- Traditional team -->
         <text font-family="DM Mono,monospace" font-size="10" letter-spacing="1" fill="var(--ink-muted)" x="20" y="70">10-PERSON TRADITIONAL SCRUM TEAM</text>
-
-        <!-- Person icons (10 circles, same size as agentic dots) -->
         <g>
           <circle cx="30" cy="95" r="10" fill="#faece7" stroke="#993c1d" stroke-width="0.75"/>
           <circle cx="60" cy="95" r="10" fill="#faece7" stroke="#993c1d" stroke-width="0.75"/>
@@ -1649,68 +1762,42 @@
           <circle cx="270" cy="95" r="10" fill="#faece7" stroke="#993c1d" stroke-width="0.75"/>
           <circle cx="300" cy="95" r="10" fill="#faece7" stroke="#993c1d" stroke-width="0.75"/>
         </g>
-
-        <!-- Bar: 1x baseline -->
         <rect x="20" y="115" width="77" height="32" rx="6" fill="#faece7" stroke="#993c1d" stroke-width="0.75"/>
         <text font-family="DM Serif Display,serif" font-size="18" fill="#712b13" x="58" y="135" text-anchor="middle" dominant-baseline="central">1x</text>
         <text font-family="DM Mono,monospace" font-size="12" fill="#993c1d" x="108" y="135" dominant-baseline="central">10 HP</text>
-
-        <!-- Velocity label -->
         <text font-family="Instrument Sans,sans-serif" font-size="11" fill="var(--ink-muted)" x="20" y="162">Traditional team velocity</text>
-
-        <!-- Cost: Traditional -->
         <rect x="20" y="172" width="340" height="26" rx="5" fill="#faece7" stroke="#993c1d" stroke-width="0.5" opacity="0.6"/>
         <text font-family="DM Mono,monospace" font-size="11" fill="#712b13" x="190" y="189" text-anchor="middle" dominant-baseline="central">~$294,000 burn / mo</text>
         <text font-family="Instrument Sans,sans-serif" font-size="9" fill="var(--ink-muted)" x="20" y="210">at $175/hr effective rate</text>
-
-        <!-- Divider -->
         <line x1="20" y1="215" x2="460" y2="215" stroke="var(--line-strong)" stroke-width="0.5"/>
-
-        <!-- Agentic team -->
         <text font-family="DM Mono,monospace" font-size="10" letter-spacing="1" fill="var(--ink-muted)" x="20" y="245">5-PERSON AGENTIC TEAM</text>
-
-        <!-- AI-enabled engineer icons (person circle + AI amplification ring) -->
         <g>
-          <!-- Engineer 1 -->
           <circle cx="36" cy="270" r="14" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/>
           <circle cx="36" cy="270" r="10" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/>
           <circle cx="36" cy="270" r="6" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.75"/>
-          <!-- Engineer 2 -->
           <circle cx="72" cy="270" r="14" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/>
           <circle cx="72" cy="270" r="10" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/>
           <circle cx="72" cy="270" r="6" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.75"/>
-          <!-- Engineer 3 -->
           <circle cx="108" cy="270" r="14" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/>
           <circle cx="108" cy="270" r="10" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/>
           <circle cx="108" cy="270" r="6" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.75"/>
-          <!-- Engineer 4 -->
           <circle cx="144" cy="270" r="14" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/>
           <circle cx="144" cy="270" r="10" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/>
           <circle cx="144" cy="270" r="6" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.75"/>
-          <!-- Engineer 5 -->
           <circle cx="180" cy="270" r="14" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/>
           <circle cx="180" cy="270" r="10" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/>
           <circle cx="180" cy="270" r="6" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.75"/>
         </g>
-        <!-- Legend -->
         <circle cx="210" cy="270" r="3" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.5"/>
         <circle cx="210" cy="270" r="6" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 1.5" opacity="0.5"/>
         <text font-family="Instrument Sans,sans-serif" font-size="10" fill="var(--ink-muted)" x="220" y="270" dominant-baseline="central">= AI-enabled engineer</text>
-
-        <!-- Bar: 10x -->
         <rect x="20" y="290" width="384" height="32" rx="6" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.75"/>
         <text font-family="DM Serif Display,serif" font-size="18" fill="#085041" x="212" y="310" text-anchor="middle" dominant-baseline="central">10x</text>
         <text font-family="DM Mono,monospace" font-size="12" fill="#0f6e56" x="415" y="310" dominant-baseline="central">~50 HP</text>
-
-        <!-- Velocity label -->
         <text font-family="Instrument Sans,sans-serif" font-size="11" fill="var(--ink-muted)" x="20" y="337">Agent-enabled team velocity</text>
-
-        <!-- Cost: Agentic -->
         <rect x="20" y="347" width="170" height="26" rx="5" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.5" opacity="0.6"/>
         <text font-family="DM Mono,monospace" font-size="11" fill="#085041" x="105" y="364" text-anchor="middle" dominant-baseline="central">~$147,000 burn / mo</text>
         <text font-family="Instrument Sans,sans-serif" font-size="9" fill="var(--ink-muted)" x="20" y="385">at $175/hr effective rate  *Plus agent compute costs, which scale with usage not headcount</text>
-
-        <!-- Cost per HP comparison -->
         <line x1="20" y1="400" x2="460" y2="400" stroke="var(--line-strong)" stroke-width="0.5" stroke-dasharray="3 3"/>
         <text font-family="DM Mono,monospace" font-size="11" fill="var(--ink-muted)" x="20" y="420">COST PER HP:</text>
         <text font-family="DM Mono,monospace" font-size="11" fill="#712b13" x="130" y="420">Traditional ~$29,400/HP/mo</text>
@@ -1721,199 +1808,11 @@
 </section>
 
 
-<!-- ═══════════════════════════════════════════════════════
-     SLIDE 9 — TEAM CONFIGURATIONS & SCALING
-     ═══════════════════════════════════════════════════════ -->
-<section class="slide" data-slide="9" style="padding:40px 48px;">
-  <div class="slide-eyebrow reveal" style="color:var(--sage)">
-    Flexible by design
-  </div>
-  <h2 class="slide-title reveal reveal-d1" style="font-size:30px;margin-bottom:6px;">
-    Right-size the team. <em>Scale when you need to.</em>
-  </h2>
-  <p class="slide-body reveal reveal-d2" style="font-size:14px;margin-bottom:20px;max-width:720px;">
-    Every person brings their agent fleet. Teams scale from two to ten without losing velocity — just add pods.
-  </p>
-
-  <!-- ── Team Configurations ── -->
-  <div class="reveal reveal-d3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:1000px;margin-bottom:20px;">
-
-    <!-- Strike Force (2 people) -->
-    <div style="background:var(--paper-warm);border:0.5px solid var(--line-strong);border-radius:12px;padding:20px 18px;display:flex;flex-direction:column;">
-      <div style="font-family:'DM Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--sage);margin-bottom:2px;">Focused</div>
-      <div style="font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);line-height:1.1;margin-bottom:4px;">2 people</div>
-      <div style="font-size:13px;color:var(--ink-muted);margin-bottom:12px;">Rapid fixes, spikes, targeted delivery</div>
-      <!-- AI-enabled dots -->
-      <div style="display:flex;gap:16px;margin-bottom:14px;padding:8px 0;">
-        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.75"/></svg>
-        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.75"/></svg>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:5px;">
-        <div style="display:flex;align-items:center;gap:7px;">
-          <div style="width:7px;height:7px;border-radius:50%;background:#0f6e56;flex-shrink:0;"></div>
-          <span style="font-size:14px;color:var(--ink-soft);">Agentic Engineer</span>
-        </div>
-        <div style="display:flex;align-items:center;gap:7px;">
-          <div style="width:7px;height:7px;border-radius:50%;background:#0f6e56;flex-shrink:0;"></div>
-          <span style="font-size:14px;color:var(--ink-soft);">Agentic Engineer</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Pathfinder (3 people) -->
-    <div style="background:var(--paper-warm);border:0.5px solid var(--line-strong);border-radius:12px;padding:20px 18px;display:flex;flex-direction:column;">
-      <div style="font-family:'DM Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--rail);margin-bottom:2px;">Balanced</div>
-      <div style="font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);line-height:1.1;margin-bottom:4px;">3 people</div>
-      <div style="font-size:13px;color:var(--ink-muted);margin-bottom:12px;">New features, integrations, product discovery</div>
-      <!-- AI-enabled dots -->
-      <div style="display:flex;gap:16px;margin-bottom:14px;padding:8px 0;">
-        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#e8f0f8" stroke="#1a3a5c" stroke-width="0.75"/></svg>
-        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.75"/></svg>
-        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#fdf3e3" stroke="#854f0b" stroke-width="0.75"/></svg>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:5px;">
-        <div style="display:flex;align-items:center;gap:7px;">
-          <div style="width:7px;height:7px;border-radius:50%;background:#1a3a5c;flex-shrink:0;"></div>
-          <span style="font-size:14px;color:var(--ink-soft);">Agentic Architect</span>
-        </div>
-        <div style="display:flex;align-items:center;gap:7px;">
-          <div style="width:7px;height:7px;border-radius:50%;background:#0f6e56;flex-shrink:0;"></div>
-          <span style="font-size:14px;color:var(--ink-soft);">Agentic Engineer</span>
-        </div>
-        <div style="display:flex;align-items:center;gap:7px;">
-          <div style="width:7px;height:7px;border-radius:50%;background:#854f0b;flex-shrink:0;"></div>
-          <span style="font-size:14px;color:var(--ink-soft);">Agentic PO/Designer</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Full Spectrum (5 people) -->
-    <div style="background:var(--paper-warm);border:0.5px solid var(--line-strong);border-radius:12px;padding:20px 18px;display:flex;flex-direction:column;">
-      <div style="font-family:'DM Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ember);margin-bottom:2px;">Comprehensive</div>
-      <div style="font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);line-height:1.1;margin-bottom:4px;">5 people</div>
-      <div style="font-size:13px;color:var(--ink-muted);margin-bottom:12px;">Complex builds, new products, end-to-end</div>
-      <!-- AI-enabled dots -->
-      <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:14px;padding:8px 0;">
-        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#e8f0f8" stroke="#1a3a5c" stroke-width="0.75"/></svg>
-        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.75"/></svg>
-        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#faece7" stroke="#993c1d" stroke-width="0.75"/></svg>
-        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#fdf3e3" stroke="#854f0b" stroke-width="0.75"/></svg>
-        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="14" cy="14" r="9.5" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="14" cy="14" r="6" fill="#eeedfe" stroke="#534ab7" stroke-width="0.75"/></svg>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:5px;">
-        <div style="display:flex;align-items:center;gap:7px;">
-          <div style="width:7px;height:7px;border-radius:50%;background:#1a3a5c;flex-shrink:0;"></div>
-          <span style="font-size:14px;color:var(--ink-soft);">Agentic Architect</span>
-        </div>
-        <div style="display:flex;align-items:center;gap:7px;">
-          <div style="width:7px;height:7px;border-radius:50%;background:#0f6e56;flex-shrink:0;"></div>
-          <span style="font-size:14px;color:var(--ink-soft);">Agentic Engineer</span>
-        </div>
-        <div style="display:flex;align-items:center;gap:7px;">
-          <div style="width:7px;height:7px;border-radius:50%;background:#993c1d;flex-shrink:0;"></div>
-          <span style="font-size:14px;color:var(--ink-soft);">Agentic QA</span>
-        </div>
-        <div style="display:flex;align-items:center;gap:7px;">
-          <div style="width:7px;height:7px;border-radius:50%;background:#854f0b;flex-shrink:0;"></div>
-          <span style="font-size:14px;color:var(--ink-soft);">Agentic PO/Designer</span>
-        </div>
-        <div style="display:flex;align-items:center;gap:7px;">
-          <div style="width:7px;height:7px;border-radius:50%;background:#534ab7;flex-shrink:0;"></div>
-          <span style="font-size:14px;color:var(--ink-soft);">Agentic Delivery Engineer</span>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- ── Transition note ── -->
-  <p class="reveal reveal-d3" style="font-size:13px;color:var(--ink-muted);max-width:1000px;margin-bottom:8px;font-style:italic;">These configurations are building blocks — combine them for larger programs.</p>
-
-  <!-- ── Divider ── -->
-  <div class="reveal reveal-d3" style="display:flex;align-items:center;gap:12px;max-width:1000px;margin-bottom:16px;">
-    <div style="flex:1;height:0.5px;background:var(--line-strong);"></div>
-    <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.1em;color:var(--ink-muted);text-transform:uppercase;">Scales to</div>
-    <div style="flex:1;height:0.5px;background:var(--line-strong);"></div>
-  </div>
-
-  <!-- ── Program Scale (10 people) ── -->
-  <div class="reveal reveal-d4" style="max-width:1000px;">
-
-    <!-- Engagement Leadership -->
-    <div style="background:#e8f0f8;border:0.75px solid #1a3a5c;border-radius:8px;padding:10px 20px;display:flex;align-items:center;justify-content:center;gap:36px;margin-bottom:3px;">
-      <div style="display:flex;align-items:center;gap:8px;">
-        <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="12" cy="12" r="8" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="12" cy="12" r="5" fill="white" stroke="#1a3a5c" stroke-width="0.75"/></svg>
-        <div>
-          <div style="font-family:'DM Serif Display',serif;font-size:15px;color:#1a3a5c;line-height:1.2;">Agentic Architect</div>
-          <div style="font-size:11px;color:var(--ink-muted);">Technical coherence across all pods</div>
-        </div>
-      </div>
-      <div style="width:1px;height:24px;background:#1a3a5c;opacity:0.2;"></div>
-      <div style="display:flex;align-items:center;gap:8px;">
-        <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="none" stroke="#534ab7" stroke-width="0.75" stroke-dasharray="3 2" opacity="0.5"/><circle cx="12" cy="12" r="8" fill="none" stroke="#534ab7" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><circle cx="12" cy="12" r="5" fill="white" stroke="#534ab7" stroke-width="0.75"/></svg>
-        <div>
-          <div style="font-family:'DM Serif Display',serif;font-size:15px;color:#534ab7;line-height:1.2;">Agentic Delivery Engineer</div>
-          <div style="font-size:11px;color:var(--ink-muted);">Program coordination, stakeholders, risk</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Connector lines -->
-    <div style="display:flex;justify-content:space-around;padding:0 80px;">
-      <div style="width:1px;height:12px;background:var(--line-strong);"></div>
-      <div style="width:1px;height:12px;background:var(--line-strong);"></div>
-      <div style="width:1px;height:12px;background:var(--line-strong);"></div>
-    </div>
-
-    <!-- Three pods -->
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
-
-      <!-- Pod A: Core Platform -->
-      <div style="background:var(--paper-warm);border:0.5px solid var(--line-strong);border-radius:8px;padding:14px 14px;">
-        <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--sage);margin-bottom:6px;">Core Platform &nbsp;&#x2022;&nbsp; 3 people</div>
-        <div style="display:flex;gap:10px;margin-bottom:8px;">
-          <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="none" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="2.5 1.5" opacity="0.45"/><circle cx="11" cy="11" r="7" fill="none" stroke="#534ab7" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.25"/><circle cx="11" cy="11" r="4.5" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.6"/></svg>
-          <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="none" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="2.5 1.5" opacity="0.45"/><circle cx="11" cy="11" r="7" fill="none" stroke="#534ab7" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.25"/><circle cx="11" cy="11" r="4.5" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.6"/></svg>
-          <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="none" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="2.5 1.5" opacity="0.45"/><circle cx="11" cy="11" r="7" fill="none" stroke="#534ab7" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.25"/><circle cx="11" cy="11" r="4.5" fill="#faece7" stroke="#993c1d" stroke-width="0.6"/></svg>
-        </div>
-        <div style="font-size:12px;color:var(--ink-muted);line-height:1.4;">Agentic Engineer x2 + Agentic QA</div>
-      </div>
-
-      <!-- Pod B: Feature Delivery -->
-      <div style="background:var(--paper-warm);border:0.5px solid var(--line-strong);border-radius:8px;padding:14px 14px;">
-        <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;">Feature Delivery &nbsp;&#x2022;&nbsp; 3 people</div>
-        <div style="display:flex;gap:10px;margin-bottom:8px;">
-          <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="none" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="2.5 1.5" opacity="0.45"/><circle cx="11" cy="11" r="7" fill="none" stroke="#534ab7" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.25"/><circle cx="11" cy="11" r="4.5" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.6"/></svg>
-          <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="none" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="2.5 1.5" opacity="0.45"/><circle cx="11" cy="11" r="7" fill="none" stroke="#534ab7" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.25"/><circle cx="11" cy="11" r="4.5" fill="#fdf3e3" stroke="#854f0b" stroke-width="0.6"/></svg>
-          <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="none" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="2.5 1.5" opacity="0.45"/><circle cx="11" cy="11" r="7" fill="none" stroke="#534ab7" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.25"/><circle cx="11" cy="11" r="4.5" fill="#faece7" stroke="#993c1d" stroke-width="0.6"/></svg>
-        </div>
-        <div style="font-size:12px;color:var(--ink-muted);line-height:1.4;">Agentic Engineer + Agentic PO/Designer + Agentic QA</div>
-      </div>
-
-      <!-- Pod C: Integration & Migration -->
-      <div style="background:var(--paper-warm);border:0.5px solid var(--line-strong);border-radius:8px;padding:14px 14px;">
-        <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--rail);margin-bottom:6px;">Integration &nbsp;&#x2022;&nbsp; 2 people</div>
-        <div style="display:flex;gap:10px;margin-bottom:8px;">
-          <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="none" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="2.5 1.5" opacity="0.45"/><circle cx="11" cy="11" r="7" fill="none" stroke="#534ab7" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.25"/><circle cx="11" cy="11" r="4.5" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.6"/></svg>
-          <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="none" stroke="#534ab7" stroke-width="0.6" stroke-dasharray="2.5 1.5" opacity="0.45"/><circle cx="11" cy="11" r="7" fill="none" stroke="#534ab7" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.25"/><circle cx="11" cy="11" r="4.5" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.6"/></svg>
-        </div>
-        <div style="font-size:12px;color:var(--ink-muted);line-height:1.4;">Agentic Engineer x2</div>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="reveal reveal-d4" style="margin-top:16px;font-family:'DM Mono',monospace;font-size:11px;color:var(--ink-muted);letter-spacing:0.04em;text-align:center;">
-    2 TO 10 PEOPLE &nbsp;&#x2022;&nbsp; SAME BUILDING BLOCKS &nbsp;&#x2022;&nbsp; UNLIMITED AGENT WORKFLOWS
-  </div>
-</section>
-
-
 
 <!-- ═══════════════════════════════════════════════════════
      SLIDE 10 — CTA / CLOSING
      ═══════════════════════════════════════════════════════ -->
-<section class="slide slide-cta" data-slide="10" style="overflow:hidden;">
+<section class="slide slide-cta" data-slide="9" style="overflow:hidden;">
   <canvas id="meshCta" width="1600" height="900" style="position:absolute;inset:0;width:100%;height:100%;opacity:0.35;pointer-events:none;"></canvas>
   <div class="slide-eyebrow reveal" style="position:relative;">The future of teams</div>
   <h2 class="cta-title reveal reveal-d1" style="position:relative;">Smaller teams.<br>Bigger output.<br><em>Higher quality.</em></h2>
